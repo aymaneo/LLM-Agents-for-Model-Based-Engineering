@@ -1,0 +1,182 @@
+[
+    {
+        "name": "Grafcet2PetriNet",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/Grafcet.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/PetriNet.ecore"
+            }
+        ],
+        "atlFile": "./Transformations/Grafcet2PetriNet.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Models/example.xmi"
+                ],
+                "target": [
+                    "./Models/targetgrafcet.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "PetriNet2Grafcet",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/PetriNet.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/Grafcet.ecore"
+            }
+        ],
+        "atlFile": "./Transformations/PetriNet2Grafcet.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Models/Grafcet2PetriNet_example.xmi"
+                ],
+                "target": [
+                    "./Models/target2.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "PNML2PetriNet",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/PNML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/PetriNet.ecore"
+            }
+        ],
+        "atlFile": "./Transformations/PNML2PetriNet.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Models/PetriNet2PNML_example.xmi"
+                ],
+                "target": [
+                    "./Models/target3.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "PetriNet2PNML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/PetriNet.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/PNML.ecore"
+            }
+        ],
+        "atlFile": "./Transformations/PetriNet2PNML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Models/PNML2PetriNet_example.xmi"
+                ],
+                "target": [
+                    "./Models/target4.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "PNML2XML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/PNML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/XML.ecore"
+            }
+        ],
+        "atlFile": "./Transformations/PNML2XML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Models/XML2PNML_example.xmi"
+                ],
+                "target": [
+                    "./Models/target5.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "XML2PNML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/XML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/PNML.ecore"
+            }
+        ],
+        "atlFile": "./Transformations/XML2PNML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Models/PNML2XML_example.xmi"
+                ],
+                "target": [
+                    "./Models/target6.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

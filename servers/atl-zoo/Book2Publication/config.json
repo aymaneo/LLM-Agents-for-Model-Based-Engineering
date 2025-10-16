@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Book2Publication",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Book/Book.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Publication/Publication.ecore"
+            }
+        ],
+        "atlFile": "./ATLFile/Book2Publication.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Book/modelBook.xmi"
+                ],
+                "target": [
+                    "./Publication/outputModelPublication.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "XML2Book",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./XML/XML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Book/Book.ecore"
+            }
+        ],
+        "atlFile": "./ATLFile/XML2Book.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./XML/inputModelXML.xmi"
+                ],
+                "target": [
+                    "./XML/outputmodel.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

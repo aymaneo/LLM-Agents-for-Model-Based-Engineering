@@ -1,0 +1,32 @@
+[
+    {
+        "name": "UML2JAVA",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./UML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./JAVA.ecore"
+            }
+        ],
+        "atlFile": "",
+        "sample_models": [
+            {
+                "source": [
+                    "./ExampleUML.xmi"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

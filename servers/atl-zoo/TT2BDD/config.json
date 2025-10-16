@@ -1,0 +1,32 @@
+[
+    {
+        "name": "TT2BDD",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./TT/TT.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./BDD/BDD.ecore"
+            }
+        ],
+        "atlFile": "./TT2BDD/TT2BDD.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "Test.tt"
+                ],
+                "target": [
+                    "Test.bdd"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

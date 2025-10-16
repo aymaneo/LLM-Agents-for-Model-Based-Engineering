@@ -1,0 +1,123 @@
+[
+    {
+        "name": "R2ML2WSDL",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/r2ml/R2ML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/wsdl/WSDL.ecore"
+            }
+        ],
+        "atlFile": "./transformations/R2ML2WSDL/R2ML2WSDL.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./outModels/XML2R2ML/xml2r2ml_model.xmi"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "R2ML2XML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/r2ml/R2ML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/xml/XML.ecore"
+            }
+        ],
+        "atlFile": "./transformations/R2ML2XML/R2ML2XML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./outModels/R2ML2XML/r2ml2xml_model.xmi"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "XML2R2ML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/xml/XML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/r2ml/R2ML.ecore"
+            }
+        ],
+        "atlFile": "./transformations/XML2R2ML/XML2R2ML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./outModels/XML2R2ML/xml2r2ml_model.xmi"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "XML2WSDL",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/xml/XML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/wsdl/WSDL.ecore"
+            }
+        ],
+        "atlFile": "./transformations/XML2WSDL/XML2WSDL.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./outModels/XML2WSDL/xml2wsdl_model.xmi"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]
+

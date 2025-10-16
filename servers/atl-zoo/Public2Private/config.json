@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Public2Private",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./UML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./UML.ecore"
+            }
+        ],
+        "atlFile": "./Public2Private.atl",
+        "sample_models": [
+            {
+                "source": [
+                    ""
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

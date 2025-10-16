@@ -1,0 +1,119 @@
+[
+    {
+        "name": "TypeA2TypeB_v1",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodel/TypeA.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodel/TypeB.ecore"
+            }
+        ],
+        "atlFile": "./Transformations/TypeA2TypeB_v1.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./SampleModels/RootA.xmi"
+                ],
+                "target": [
+                    "./SampleModels/RootB.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "TypeA2TypeB_v2",
+        "description": "",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodel/TypeA.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodel/TypeB.ecore"
+            }
+        ],
+        "atlFile": "./Transformations/TypeA2TypeB_v2.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./SampleModels/RootA.xmi"
+                ],
+                "target": [
+                    "./SampleModels/RootB.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "TypeB2TypeA_v3_firstStep",
+        "description": "",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodel/TypeB.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodel/TypeA.ecore"
+            }
+        ],
+        "atlFile": "./Transformations/TypeB2TypeA_v3_firstStep.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./SampleModels/RootB.xmi"
+                ],
+                "target": [
+                    "./SampleModels/RootA.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "TypeB2TypeA_v3_second_step",
+        "description": "",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodel/TypeB.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodel/TypeA.ecore"
+            }
+        ],
+        "atlFile": "./Transformations/TypeB2TypeA_v3_second_step.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./SampleModels/RootB.xmi"
+                ],
+                "target": [
+                    "./SampleModels/RootA.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

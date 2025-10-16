@@ -1,0 +1,32 @@
+[
+    {
+        "name": "KM32EMF",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./KM3.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./EMF.ecore"
+            }
+        ],
+        "atlFile": "./KM32EMF.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Sample-KM3.xmi"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

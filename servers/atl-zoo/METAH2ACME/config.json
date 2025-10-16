@@ -1,0 +1,32 @@
+[
+    {
+        "name": "METAH2ACME",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./METAH.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./ACME.ecore"
+            }
+        ],
+        "atlFile": "./METAH2ACME.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./MODELS/example-METAH.xmi"
+                ],
+                "target": [
+                    "./MODELS/example-ACME.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

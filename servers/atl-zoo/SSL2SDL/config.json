@@ -1,0 +1,32 @@
+[
+    {
+        "name": "SSL2SDLTransformation",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/SSL.xmi"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/SDL.xmi"
+            }
+        ],
+        "atlFile": "./transformation/SSL2SDL.atl",
+        "sample_models": [
+            {
+                "source": [
+                    ""
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

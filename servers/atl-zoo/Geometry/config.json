@@ -1,0 +1,62 @@
+[
+    {
+        "name": "XML2DXF",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./XML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./DXF/DXF.ecore"
+            }
+        ],
+        "atlFile": "./ATLFile/XML2DXF.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./cube.xmi"
+                ],
+                "target": [
+                    "./cubetarget1.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "XML2GeoTrans",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./XML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./GeoTrans/GeoTrans.ecore"
+            }
+        ],
+        "atlFile": "./ATLFile/XML2GeoTrans.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./TransfoCommands.xmi"
+                ],
+                "target": [
+                    "./target3.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

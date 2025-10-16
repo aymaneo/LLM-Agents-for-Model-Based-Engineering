@@ -1,0 +1,61 @@
+[
+    {
+        "name": "AnyLogic2XML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/AnyLogic.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/XML.ecore"
+            }
+        ],
+        "atlFile": "./AnyLogic2XML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    ""
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "UML2AnyLogic",
+        "description": "",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": ""
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/AnyLogic.ecore"
+            }
+        ],
+        "atlFile": "./UML2AnyLogic.atl",
+        "sample_models": [
+            {
+                "source": [
+                    ""
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

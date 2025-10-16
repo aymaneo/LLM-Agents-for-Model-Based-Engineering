@@ -1,0 +1,92 @@
+[
+    {
+        "name": "XML2XSLT",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./XML/XML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./XSLT/XSLT.ecore"
+            }
+        ],
+        "atlFile": "./ATLFile/XML2XSLT.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./XML/tr.xsl-XML.xmi"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "XSLT2XQuery",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./XSLT/XSLT.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./XQuery/XQuery.ecore"
+            }
+        ],
+        "atlFile": "./ATLFile/XSLT2XQuery.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./XSLT/test-XSLT.xmi"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "XQuery2Code",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./XQuery/XQuery.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": ""
+            }
+        ],
+        "atlFile": "./ATLFile/XQuery2Code.atl",
+        "sample_models": [
+            {
+                "source": [
+                    ""
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

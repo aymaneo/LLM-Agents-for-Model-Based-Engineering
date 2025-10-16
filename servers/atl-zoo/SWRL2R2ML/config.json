@@ -1,0 +1,109 @@
+[
+    {
+        "name": "R2ML2XML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/r2ml/r2ml.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/xml/XML.ecore"
+            }
+        ],
+        "atlFile": "./transformations/XML2R2ML/R2ML2XML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./models/r2ml-xml/R2ML.xmi"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [
+            {
+                "name": "strings",
+                "path": "../strings.asm"
+            }
+        ],
+        "enabled": "False"
+    },
+    {
+        "name": "RDM2R2ML",
+        "description": "",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/rdm/rdm.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/r2ml/r2ml.ecore"
+            }
+        ],
+        "atlFile": "./transformations/RDM2R2ML/RDM2R2ML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    ""
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [
+            {
+                "name": "strings",
+                "path": "../strings.asm"
+            }
+        ],
+        "enabled": "False"
+    },
+    {
+        "name": "XML2RDM",
+        "description": "",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/xml/XML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/rdm/rdm.ecore"
+            }
+        ],
+        "atlFile": "./transformations/XML2RDM/XML2RDM.atl",
+        "sample_models": [
+            {
+                "source": [
+                    ""
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [
+            {
+                "name": "strings",
+                "path": "../strings.asm"
+            },
+            {
+                "name": "XMLHelpers",
+                "path": "./transformations/XML2RDM/XMLHelpers.atl"
+            }
+        ],
+        "enabled": "False"
+    }
+]

@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="XML" name="rdf:RDF">
+  <children xsi:type="Attribute" name="xmlns:rdf" value="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+  <children xsi:type="Attribute" name="xmlns:rdfs" value="http://www.w3.org/2000/01/rdf-schema#"/>
+  <children xsi:type="Attribute" name="xmlns:xsd" value="http://www.w3.org/2001/XMLSchema#"/>
+  <children xsi:type="Attribute" name="xmlns:owl" value="http://www.w3.org/2002/07/owl#"/>
+  <children xsi:type="Attribute" name="xmlns" value="http://example.org/KM3#"/>
+  <children xsi:type="Attribute" name="xml:base" value="http://example.org/KM3"/>
+  <children xsi:type="Element" name="owl:Ontology">
+    <children xsi:type="Attribute" name="rdf:about" value="KM3"/>
+  </children>
+  <children xsi:type="Element" name="owl:Class">
+    <children xsi:type="Attribute" name="rdf:ID" value="LocatedElement"/>
+    <children xsi:type="Element" name="rdfs:label">
+      <children xsi:type="Text" name="#text" value="LocatedElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#LocatedElement.location"/>
+        </children>
+        <children xsi:type="Element" name="owl:cardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="1"/>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#LocatedElement.commentsBefore"/>
+        </children>
+        <children xsi:type="Element" name="owl:minCardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="0"/>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#LocatedElement.commentsAfter"/>
+        </children>
+        <children xsi:type="Element" name="owl:minCardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="0"/>
+        </children>
+      </children>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:Class">
+    <children xsi:type="Attribute" name="rdf:ID" value="ModelElement"/>
+    <children xsi:type="Element" name="rdfs:label">
+      <children xsi:type="Text" name="#text" value="ModelElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#LocatedElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#ModelElement.name"/>
+        </children>
+        <children xsi:type="Element" name="owl:cardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="1"/>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#ModelElement.package"/>
+        </children>
+        <children xsi:type="Element" name="owl:cardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="1"/>
+        </children>
+      </children>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:Class">
+    <children xsi:type="Attribute" name="rdf:ID" value="Classifier"/>
+    <children xsi:type="Element" name="rdfs:label">
+      <children xsi:type="Text" name="#text" value="Classifier"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#ModelElement"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:Class">
+    <children xsi:type="Attribute" name="rdf:ID" value="DataType"/>
+    <children xsi:type="Element" name="rdfs:label">
+      <children xsi:type="Text" name="#text" value="DataType"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Classifier"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:Class">
+    <children xsi:type="Attribute" name="rdf:ID" value="Enumeration"/>
+    <children xsi:type="Element" name="rdfs:label">
+      <children xsi:type="Text" name="#text" value="Enumeration"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Classifier"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#Enumeration.literals"/>
+        </children>
+        <children xsi:type="Element" name="owl:minCardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="0"/>
+        </children>
+      </children>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:Class">
+    <children xsi:type="Attribute" name="rdf:ID" value="EnumLiteral"/>
+    <children xsi:type="Element" name="rdfs:label">
+      <children xsi:type="Text" name="#text" value="EnumLiteral"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#ModelElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#EnumLiteral.enum"/>
+        </children>
+        <children xsi:type="Element" name="owl:cardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="1"/>
+        </children>
+      </children>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:Class">
+    <children xsi:type="Attribute" name="rdf:ID" value="TemplateParameter"/>
+    <children xsi:type="Element" name="rdfs:label">
+      <children xsi:type="Text" name="#text" value="TemplateParameter"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Classifier"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:Class">
+    <children xsi:type="Attribute" name="rdf:ID" value="Class"/>
+    <children xsi:type="Element" name="rdfs:label">
+      <children xsi:type="Text" name="#text" value="Class"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Classifier"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#Class.isAbstract"/>
+        </children>
+        <children xsi:type="Element" name="owl:cardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="1"/>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#Class.parameters"/>
+        </children>
+        <children xsi:type="Element" name="owl:minCardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="0"/>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#Class.supertypes"/>
+        </children>
+        <children xsi:type="Element" name="owl:minCardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="0"/>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#Class.structuralFeatures"/>
+        </children>
+        <children xsi:type="Element" name="owl:minCardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="0"/>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#Class.operations"/>
+        </children>
+        <children xsi:type="Element" name="owl:minCardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="0"/>
+        </children>
+      </children>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:Class">
+    <children xsi:type="Attribute" name="rdf:ID" value="TypedElement"/>
+    <children xsi:type="Element" name="rdfs:label">
+      <children xsi:type="Text" name="#text" value="TypedElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#ModelElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#TypedElement.lower"/>
+        </children>
+        <children xsi:type="Element" name="owl:cardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="1"/>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#TypedElement.upper"/>
+        </children>
+        <children xsi:type="Element" name="owl:cardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="1"/>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#TypedElement.isOrdered"/>
+        </children>
+        <children xsi:type="Element" name="owl:cardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="1"/>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#TypedElement.isUnique"/>
+        </children>
+        <children xsi:type="Element" name="owl:cardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="1"/>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#TypedElement.type"/>
+        </children>
+        <children xsi:type="Element" name="owl:cardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="1"/>
+        </children>
+      </children>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:Class">
+    <children xsi:type="Attribute" name="rdf:ID" value="StructuralFeature"/>
+    <children xsi:type="Element" name="rdfs:label">
+      <children xsi:type="Text" name="#text" value="StructuralFeature"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#TypedElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#StructuralFeature.owner"/>
+        </children>
+        <children xsi:type="Element" name="owl:cardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="1"/>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#StructuralFeature.subsetOf"/>
+        </children>
+        <children xsi:type="Element" name="owl:minCardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="0"/>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#StructuralFeature.derivedFrom"/>
+        </children>
+        <children xsi:type="Element" name="owl:minCardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="0"/>
+        </children>
+      </children>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:Class">
+    <children xsi:type="Attribute" name="rdf:ID" value="Attribute"/>
+    <children xsi:type="Element" name="rdfs:label">
+      <children xsi:type="Text" name="#text" value="Attribute"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#StructuralFeature"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:Class">
+    <children xsi:type="Attribute" name="rdf:ID" value="Reference"/>
+    <children xsi:type="Element" name="rdfs:label">
+      <children xsi:type="Text" name="#text" value="Reference"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#StructuralFeature"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#Reference.isContainer"/>
+        </children>
+        <children xsi:type="Element" name="owl:cardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="1"/>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#Reference.opposite"/>
+        </children>
+        <children xsi:type="Element" name="owl:minCardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="0"/>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#Reference.opposite"/>
+        </children>
+        <children xsi:type="Element" name="owl:maxCardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="1"/>
+        </children>
+      </children>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:Class">
+    <children xsi:type="Attribute" name="rdf:ID" value="Operation"/>
+    <children xsi:type="Element" name="rdfs:label">
+      <children xsi:type="Text" name="#text" value="Operation"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#TypedElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#Operation.owner"/>
+        </children>
+        <children xsi:type="Element" name="owl:cardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="1"/>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#Operation.parameters"/>
+        </children>
+        <children xsi:type="Element" name="owl:minCardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="0"/>
+        </children>
+      </children>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:Class">
+    <children xsi:type="Attribute" name="rdf:ID" value="Parameter"/>
+    <children xsi:type="Element" name="rdfs:label">
+      <children xsi:type="Text" name="#text" value="Parameter"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#TypedElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#Parameter.owner"/>
+        </children>
+        <children xsi:type="Element" name="owl:cardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="1"/>
+        </children>
+      </children>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:Class">
+    <children xsi:type="Attribute" name="rdf:ID" value="Package"/>
+    <children xsi:type="Element" name="rdfs:label">
+      <children xsi:type="Text" name="#text" value="Package"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#ModelElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#Package.contents"/>
+        </children>
+        <children xsi:type="Element" name="owl:minCardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="0"/>
+        </children>
+      </children>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#Package.metamodel"/>
+        </children>
+        <children xsi:type="Element" name="owl:cardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="1"/>
+        </children>
+      </children>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:Class">
+    <children xsi:type="Attribute" name="rdf:ID" value="Metamodel"/>
+    <children xsi:type="Element" name="rdfs:label">
+      <children xsi:type="Text" name="#text" value="Metamodel"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#LocatedElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:subClassOf">
+      <children xsi:type="Element" name="owl:Restriction">
+        <children xsi:type="Element" name="owl:onProperty">
+          <children xsi:type="Attribute" name="rdf:resource" value="#Metamodel.contents"/>
+        </children>
+        <children xsi:type="Element" name="owl:minCardinality ">
+          <children xsi:type="Attribute" name="rdf:datatype" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+          <children xsi:type="Text" name="#text" value="0"/>
+        </children>
+      </children>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:DatatypeProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="LocatedElement.location"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#LocatedElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="http://www.w3.org/2001/XMLSchema#string"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:DatatypeProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="LocatedElement.commentsBefore"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#LocatedElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="http://www.w3.org/2001/XMLSchema#string"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:DatatypeProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="LocatedElement.commentsAfter"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#LocatedElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="http://www.w3.org/2001/XMLSchema#string"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:DatatypeProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="ModelElement.name"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#ModelElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="http://www.w3.org/2001/XMLSchema#string"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:DatatypeProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="Class.isAbstract"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Class"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:DatatypeProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="TypedElement.lower"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#TypedElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:DatatypeProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="TypedElement.upper"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#TypedElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:DatatypeProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="TypedElement.isOrdered"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#TypedElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:DatatypeProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="TypedElement.isUnique"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#TypedElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:DatatypeProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="Reference.isContainer"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Reference"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:ObjectProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="ModelElement.package"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#ModelElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Package"/>
+    </children>
+    <children xsi:type="Element" name="owl:inverseOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Package.contents"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:ObjectProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="Enumeration.literals"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Enumeration"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="#EnumLiteral"/>
+    </children>
+    <children xsi:type="Element" name="owl:inverseOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#EnumLiteral.enum"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:ObjectProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="EnumLiteral.enum"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#EnumLiteral"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Enumeration"/>
+    </children>
+    <children xsi:type="Element" name="owl:inverseOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Enumeration.literals"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:ObjectProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="Class.parameters"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Class"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="#TemplateParameter"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:ObjectProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="Class.supertypes"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Class"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Class"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:ObjectProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="Class.structuralFeatures"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Class"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="#StructuralFeature"/>
+    </children>
+    <children xsi:type="Element" name="owl:inverseOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#StructuralFeature.owner"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:ObjectProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="Class.operations"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Class"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Operation"/>
+    </children>
+    <children xsi:type="Element" name="owl:inverseOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Operation.owner"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:ObjectProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="TypedElement.type"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#TypedElement"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Classifier"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:ObjectProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="StructuralFeature.owner"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#StructuralFeature"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Class"/>
+    </children>
+    <children xsi:type="Element" name="owl:inverseOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Class.structuralFeatures"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:ObjectProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="StructuralFeature.subsetOf"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#StructuralFeature"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="#StructuralFeature"/>
+    </children>
+    <children xsi:type="Element" name="owl:inverseOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#StructuralFeature.derivedFrom"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:ObjectProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="StructuralFeature.derivedFrom"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#StructuralFeature"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="#StructuralFeature"/>
+    </children>
+    <children xsi:type="Element" name="owl:inverseOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#StructuralFeature.subsetOf"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:ObjectProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="Reference.opposite"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Reference"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Reference"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:ObjectProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="Operation.owner"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Operation"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Class"/>
+    </children>
+    <children xsi:type="Element" name="owl:inverseOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Class.operations"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:ObjectProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="Operation.parameters"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Operation"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Parameter"/>
+    </children>
+    <children xsi:type="Element" name="owl:inverseOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Parameter.owner"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:ObjectProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="Parameter.owner"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Parameter"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Operation"/>
+    </children>
+    <children xsi:type="Element" name="owl:inverseOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Operation.parameters"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:ObjectProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="Package.contents"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Package"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="#ModelElement"/>
+    </children>
+    <children xsi:type="Element" name="owl:inverseOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#ModelElement.package"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:ObjectProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="Package.metamodel"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Package"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Metamodel"/>
+    </children>
+    <children xsi:type="Element" name="owl:inverseOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Metamodel.contents"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:ObjectProperty">
+    <children xsi:type="Attribute" name="rdf:ID" value="Metamodel.contents"/>
+    <children xsi:type="Element" name="rdfs:domain">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Metamodel"/>
+    </children>
+    <children xsi:type="Element" name="rdfs:range">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Package"/>
+    </children>
+    <children xsi:type="Element" name="owl:inverseOf">
+      <children xsi:type="Attribute" name="rdf:resource" value="#Package.metamodel"/>
+    </children>
+  </children>
+  <children xsi:type="Element" name="owl:FunctionalProperty">
+    <children xsi:type="Attribute" name="rdf:about" value="#LocatedElement.location"/>
+  </children>
+  <children xsi:type="Element" name="owl:FunctionalProperty">
+    <children xsi:type="Attribute" name="rdf:about" value="#ModelElement.name"/>
+  </children>
+  <children xsi:type="Element" name="owl:FunctionalProperty">
+    <children xsi:type="Attribute" name="rdf:about" value="#Class.isAbstract"/>
+  </children>
+  <children xsi:type="Element" name="owl:FunctionalProperty">
+    <children xsi:type="Attribute" name="rdf:about" value="#TypedElement.lower"/>
+  </children>
+  <children xsi:type="Element" name="owl:FunctionalProperty">
+    <children xsi:type="Attribute" name="rdf:about" value="#TypedElement.upper"/>
+  </children>
+  <children xsi:type="Element" name="owl:FunctionalProperty">
+    <children xsi:type="Attribute" name="rdf:about" value="#TypedElement.isOrdered"/>
+  </children>
+  <children xsi:type="Element" name="owl:FunctionalProperty">
+    <children xsi:type="Attribute" name="rdf:about" value="#TypedElement.isUnique"/>
+  </children>
+  <children xsi:type="Element" name="owl:FunctionalProperty">
+    <children xsi:type="Attribute" name="rdf:about" value="#Reference.isContainer"/>
+  </children>
+  <children xsi:type="Element" name="owl:FunctionalProperty">
+    <children xsi:type="Attribute" name="rdf:about" value="#ModelElement.package"/>
+  </children>
+  <children xsi:type="Element" name="owl:FunctionalProperty">
+    <children xsi:type="Attribute" name="rdf:about" value="#EnumLiteral.enum"/>
+  </children>
+  <children xsi:type="Element" name="owl:FunctionalProperty">
+    <children xsi:type="Attribute" name="rdf:about" value="#TypedElement.type"/>
+  </children>
+  <children xsi:type="Element" name="owl:FunctionalProperty">
+    <children xsi:type="Attribute" name="rdf:about" value="#StructuralFeature.owner"/>
+  </children>
+  <children xsi:type="Element" name="owl:FunctionalProperty">
+    <children xsi:type="Attribute" name="rdf:about" value="#Operation.owner"/>
+  </children>
+  <children xsi:type="Element" name="owl:FunctionalProperty">
+    <children xsi:type="Attribute" name="rdf:about" value="#Parameter.owner"/>
+  </children>
+  <children xsi:type="Element" name="owl:FunctionalProperty">
+    <children xsi:type="Attribute" name="rdf:about" value="#Package.metamodel"/>
+  </children>
+  <children xsi:type="Element" name="owl:SymmetricProperty">
+    <children xsi:type="Attribute" name="rdf:about" value="#StructuralFeature.subsetOf"/>
+  </children>
+  <children xsi:type="Element" name="owl:SymmetricProperty">
+    <children xsi:type="Attribute" name="rdf:about" value="#StructuralFeature.derivedFrom"/>
+  </children>
+</Root>

@@ -1,0 +1,61 @@
+[
+    {
+        "name": "SVG2XML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/SVG.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/XML.ecore"
+            }
+        ],
+        "atlFile": "./transformations/SVG2XML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "/models/example-SVGBarChart.svg"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "Table2SVGPieChart",
+        "description": "",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/Table.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/SVG.ecore"
+            }
+        ],
+        "atlFile": "./transformations/Table2SVGPieChart.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./models/example-Table.xmi"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

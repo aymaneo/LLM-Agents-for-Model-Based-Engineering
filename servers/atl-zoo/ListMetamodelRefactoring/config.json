@@ -1,0 +1,32 @@
+[
+    {
+        "name": "A2B",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodel/A.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodel/B.ecore"
+            }
+        ],
+        "atlFile": "./Transformation/A2B.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./SampleModels/RootA.xmi"
+                ],
+                "target": [
+                    "./SampleModels/myModelB.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

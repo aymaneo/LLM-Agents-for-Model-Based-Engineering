@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Measure2Table",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/Measure.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/Table.ecore"
+            }
+        ],
+        "atlFile": "./transformations/Measure2Table.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./models/example-Measure.xmi"
+                ],
+                "target": [
+                    "./models/example-Table.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

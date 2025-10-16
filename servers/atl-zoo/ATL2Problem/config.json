@@ -1,0 +1,32 @@
+[
+    {
+        "name": "ATL2Problem ",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/ATL-0.2.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/Problem.ecore"
+            }
+        ],
+        "atlFile": "./Transfos/ATL-WFR.atl",
+        "sample_models": [
+            {
+                "source": [
+                    ""
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

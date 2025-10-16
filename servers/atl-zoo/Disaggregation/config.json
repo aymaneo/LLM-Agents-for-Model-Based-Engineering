@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Disaggregation_with_context",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./KM3.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./KM3.ecore"
+            }
+        ],
+        "atlFile": "./with_context/Disaggregation.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./with_context/InputModels/example-KM3.xmi"
+                ],
+                "target": [
+                    "./with_context/OutputModels/example-KM3.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "Disaggregation_without_context",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./KM3.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./KM3.ecore"
+            }
+        ],
+        "atlFile": "./without_context/Disaggregation.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./without_context/InputModels/example-KM3.xmi"
+                ],
+                "target": [
+                    "./without_context/OutputModels/example-KM3.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

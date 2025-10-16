@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Uml2Amble",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./UMLDI.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Amble.ecore"
+            }
+        ],
+        "atlFile": "./UML2Amble.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./UMLDI.xmi"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

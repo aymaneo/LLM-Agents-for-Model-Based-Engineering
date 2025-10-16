@@ -1,0 +1,19 @@
+{
+  "name": "emf-server",
+  "version": "1.0.0",
+  "description": "EMF Operations Server",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "@vertex/server": "^1.0.0",
+    "xml2js": "^0.6.2",
+    "fs-extra": "^11.2.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+} 

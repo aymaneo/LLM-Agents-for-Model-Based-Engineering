@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Spreadsheet2SoftwareQualityControl",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/MSOfficeExcel_SpreadsheetMLSimplified.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/SoftwareQualityControl.ecore"
+            }
+        ],
+        "atlFile": "./transformations/Spreadsheet2SoftwareQualityControl.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./modelsExamples/BugTrackingSpreadsheetMLExample.xmi"
+                ],
+                "target": [
+                    "./modelsExamples/SoftwareQualityControlExample.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

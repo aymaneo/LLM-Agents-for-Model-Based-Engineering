@@ -1,0 +1,32 @@
+[
+    {
+        "name": "UML2KM3",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./UML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./KM3.ecore"
+            }
+        ],
+        "atlFile": "./Transformations/UML2KM3.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./ExampleUML.xmi"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

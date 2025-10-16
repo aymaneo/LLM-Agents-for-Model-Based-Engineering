@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Monitor2Semaphore",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Program.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Program.ecore"
+            }
+        ],
+        "atlFile": "./Monitor2Semaphore.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Models/ReadersAndWriters/ReadersAndWriters-Semaphore.xmi"
+                ],
+                "target": [
+                    "./Models/ReadersAndWriters/target1.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

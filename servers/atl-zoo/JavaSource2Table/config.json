@@ -1,0 +1,32 @@
+[
+    {
+        "name": "JavaSource2Table",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./JavaSource.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Table.ecore"
+            }
+        ],
+        "atlFile": "./JavaSource2Table.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./javaSource-example.xmi"
+                ],
+                "target": [
+                    "./table-example.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "XML2KML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/XML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/KML.ecore"
+            }
+        ],
+        "atlFile": "./Transformations/XML2KML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./InputModels/example-XML.xmi"
+                ],
+                "target": [
+                    "./InputModels/target.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Tree2List",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/MMTree.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/MMElementList.ecore"
+            }
+        ],
+        "atlFile": "./transformation/Tree2List.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./models/aTreeNode.xmi"
+                ],
+                "target": [
+                    "./models/elmLst.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

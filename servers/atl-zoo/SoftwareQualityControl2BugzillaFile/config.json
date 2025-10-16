@@ -1,0 +1,32 @@
+[
+    {
+        "name": "SoftwareQualityControl2Bugzilla",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/SoftwareQualityControl.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/BugzillaFile.ecore"
+            }
+        ],
+        "atlFile": "./transformations/SoftwareQualityControl2Bugzilla.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./modelsExamples/SoftwareQualityControlExample.xmi"
+                ],
+                "target": [
+                    "./modelsExamples/BugzillaExample.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

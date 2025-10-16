@@ -1,0 +1,32 @@
+[
+    {
+        "name": "BibTeXML2DocBook",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./bibTex.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./DocBook.ecore"
+            }
+        ],
+        "atlFile": "./BibTeX2DocBook.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./bibtex-example.xmi"
+                ],
+                "target": [
+                    "./DocBook.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

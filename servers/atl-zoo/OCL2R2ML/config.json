@@ -1,0 +1,72 @@
+[
+    {
+        "name": "OCL2R2ML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/ocl/OCL.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/r2ml/r2ml.ecore"
+            }
+        ],
+        "atlFile": "./transformations/OCL2R2ML/OCL2R2ML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    ""
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [
+            {
+                "name": "strings",
+                "path": "../strings.asm"
+            }
+        ],
+        "enabled": "False"
+    },
+    {
+        "name": "R2ML2XML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/r2ml/r2ml.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/xml/XML.ecore"
+            }
+        ],
+        "atlFile": "./transformations/R2ML2XML/R2ML2XML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    ""
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [
+            {
+                "name": "strings",
+                "path": "../strings.asm"
+            }
+        ],
+        "enabled": "False"
+    }
+]

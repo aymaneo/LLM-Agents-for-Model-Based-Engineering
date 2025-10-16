@@ -1,0 +1,92 @@
+[
+    {
+        "name": "XML2MySQL",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/XML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/MySQL.ecore"
+            }
+        ],
+        "atlFile": "./Transfos/XML2MySQL.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Models/euro2004-XML.xmi"
+                ],
+                "target": [
+                    "euro2004-MySQL.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "MySQL2KM3",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/MySQL.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/KM3.ecore"
+            }
+        ],
+        "atlFile": "./Transfos/MySQL2KM3.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Models/euro2004-MySQL.xmi"
+                ],
+                "target": [
+                    "euro2004-KM3.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "XML2XML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/XML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/XML.ecore"
+            }
+        ],
+        "atlFile": "./Transfos/XML2XML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Models/euro2004-XML.xmi"
+                ],
+                "target": [
+                    "target2.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

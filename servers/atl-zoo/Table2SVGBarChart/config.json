@@ -1,0 +1,61 @@
+[
+    {
+        "name": "Table2SVGBarChart",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/Table.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/SVG.ecore"
+            }
+        ],
+        "atlFile": "./transformations/Table2SVGBarChart.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./models/example-Table.xmi"
+                ],
+                "target": [
+                    "./models/example-SVGBarChart.svg"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "SVG2XML",
+        "description": "",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/SVG.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/XML.ecore"
+            }
+        ],
+        "atlFile": "./transformations/SVG2XML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./models/example-SVGBarChart.svg"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

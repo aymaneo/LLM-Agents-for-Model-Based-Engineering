@@ -1,0 +1,61 @@
+[
+    {
+        "name": "Mantis2XML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/Mantis.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/XML.ecore"
+            }
+        ],
+        "atlFile": "./transformations/Mantis2XML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./modelsExamples/MantisExample.xmi"
+                ],
+                "target": [
+                    "./modelsExamples/MantisXMLExample.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "SoftwareQualityControl2Mantis",
+        "description": "",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/SoftwareQualityControl.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/Mantis.ecore"
+            }
+        ],
+        "atlFile": "./transformations/SoftwareQualityControl2Mantis.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./modelsExamples/SoftwareQualityControlExample.xmi"
+                ],
+                "target": [
+                    "./modelsExamples/MantisExample.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="Metrics">
+  <IntegerMetric context="Model" label="Number of classes" data="16"/>
+  <IntegerMetric context="Model" label="Number of associations" data="11"/>
+  <IntegerMetric context="Model" label="Maximal depth of heritance" data="4"/>
+  <IntegerMetric context="Model" label="Number of inheritance trees" data="1"/>
+  <IntegerMetric context="Model" label="Number of inheritance graphs" data="1"/>
+  <IntegerMetric context="Class LocatedElement" label="Number of own attributes" data="3"/>
+  <IntegerMetric context="Class LocatedElement" label="Number of own references" data="0"/>
+  <IntegerMetric context="Class LocatedElement" label="Total number of attributes" data="3"/>
+  <IntegerMetric context="Class LocatedElement" label="Total number of references" data="0"/>
+  <IntegerMetric context="Class ModelElement" label="Number of own attributes" data="1"/>
+  <IntegerMetric context="Class ModelElement" label="Number of own references" data="1"/>
+  <IntegerMetric context="Class ModelElement" label="Total number of attributes" data="4"/>
+  <IntegerMetric context="Class ModelElement" label="Total number of references" data="1"/>
+  <IntegerMetric context="Class Classifier" label="Number of own attributes" data="0"/>
+  <IntegerMetric context="Class Classifier" label="Number of own references" data="0"/>
+  <IntegerMetric context="Class Classifier" label="Total number of attributes" data="1"/>
+  <IntegerMetric context="Class Classifier" label="Total number of references" data="1"/>
+  <IntegerMetric context="Class DataType" label="Number of own attributes" data="0"/>
+  <IntegerMetric context="Class DataType" label="Number of own references" data="0"/>
+  <IntegerMetric context="Class DataType" label="Total number of attributes" data="0"/>
+  <IntegerMetric context="Class DataType" label="Total number of references" data="0"/>
+  <IntegerMetric context="Class Enumeration" label="Number of own attributes" data="0"/>
+  <IntegerMetric context="Class Enumeration" label="Number of own references" data="1"/>
+  <IntegerMetric context="Class Enumeration" label="Total number of attributes" data="0"/>
+  <IntegerMetric context="Class Enumeration" label="Total number of references" data="1"/>
+  <IntegerMetric context="Class EnumLiteral" label="Number of own attributes" data="0"/>
+  <IntegerMetric context="Class EnumLiteral" label="Number of own references" data="1"/>
+  <IntegerMetric context="Class EnumLiteral" label="Total number of attributes" data="1"/>
+  <IntegerMetric context="Class EnumLiteral" label="Total number of references" data="2"/>
+  <IntegerMetric context="Class TemplateParameter" label="Number of own attributes" data="0"/>
+  <IntegerMetric context="Class TemplateParameter" label="Number of own references" data="0"/>
+  <IntegerMetric context="Class TemplateParameter" label="Total number of attributes" data="0"/>
+  <IntegerMetric context="Class TemplateParameter" label="Total number of references" data="0"/>
+  <IntegerMetric context="Class Class" label="Number of own attributes" data="1"/>
+  <IntegerMetric context="Class Class" label="Number of own references" data="4"/>
+  <IntegerMetric context="Class Class" label="Total number of attributes" data="1"/>
+  <IntegerMetric context="Class Class" label="Total number of references" data="4"/>
+  <IntegerMetric context="Class TypedElement" label="Number of own attributes" data="4"/>
+  <IntegerMetric context="Class TypedElement" label="Number of own references" data="1"/>
+  <IntegerMetric context="Class TypedElement" label="Total number of attributes" data="5"/>
+  <IntegerMetric context="Class TypedElement" label="Total number of references" data="2"/>
+  <IntegerMetric context="Class StructuralFeature" label="Number of own attributes" data="0"/>
+  <IntegerMetric context="Class StructuralFeature" label="Number of own references" data="3"/>
+  <IntegerMetric context="Class StructuralFeature" label="Total number of attributes" data="4"/>
+  <IntegerMetric context="Class StructuralFeature" label="Total number of references" data="4"/>
+  <IntegerMetric context="Class Attribute" label="Number of own attributes" data="0"/>
+  <IntegerMetric context="Class Attribute" label="Number of own references" data="0"/>
+  <IntegerMetric context="Class Attribute" label="Total number of attributes" data="0"/>
+  <IntegerMetric context="Class Attribute" label="Total number of references" data="3"/>
+  <IntegerMetric context="Class Reference" label="Number of own attributes" data="1"/>
+  <IntegerMetric context="Class Reference" label="Number of own references" data="1"/>
+  <IntegerMetric context="Class Reference" label="Total number of attributes" data="1"/>
+  <IntegerMetric context="Class Reference" label="Total number of references" data="4"/>
+  <IntegerMetric context="Class Operation" label="Number of own attributes" data="0"/>
+  <IntegerMetric context="Class Operation" label="Number of own references" data="2"/>
+  <IntegerMetric context="Class Operation" label="Total number of attributes" data="4"/>
+  <IntegerMetric context="Class Operation" label="Total number of references" data="3"/>
+  <IntegerMetric context="Class Parameter" label="Number of own attributes" data="0"/>
+  <IntegerMetric context="Class Parameter" label="Number of own references" data="1"/>
+  <IntegerMetric context="Class Parameter" label="Total number of attributes" data="4"/>
+  <IntegerMetric context="Class Parameter" label="Total number of references" data="2"/>
+  <IntegerMetric context="Class Package" label="Number of own attributes" data="0"/>
+  <IntegerMetric context="Class Package" label="Number of own references" data="2"/>
+  <IntegerMetric context="Class Package" label="Total number of attributes" data="1"/>
+  <IntegerMetric context="Class Package" label="Total number of references" data="3"/>
+  <IntegerMetric context="Class Metamodel" label="Number of own attributes" data="0"/>
+  <IntegerMetric context="Class Metamodel" label="Number of own references" data="1"/>
+  <IntegerMetric context="Class Metamodel" label="Total number of attributes" data="3"/>
+  <IntegerMetric context="Class Metamodel" label="Total number of references" data="1"/>
+</xmi:XMI>

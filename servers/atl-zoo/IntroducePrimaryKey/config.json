@@ -1,0 +1,32 @@
+[
+    {
+        "name": "PrimaryKey_with_context",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./KM3.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./KM3.ecore"
+            }
+        ],
+        "atlFile": "./with_context/PrimaryKey.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./with_context/build_example.xml"
+                ],
+                "target": [
+                    "./target.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

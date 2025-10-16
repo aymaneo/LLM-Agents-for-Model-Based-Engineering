@@ -1,0 +1,32 @@
+[
+    {
+        "name": "RaiseSupplier",
+        "description": "with_context",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./with_context/KM3.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./with_context/KM3.ecore"
+            }
+        ],
+        "atlFile": "./with_context/RaiseSupplier.atl",
+        "sample_models": [
+            {
+                "source": [
+                    ""
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

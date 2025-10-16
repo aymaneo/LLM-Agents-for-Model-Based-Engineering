@@ -1,0 +1,32 @@
+[
+    {
+        "name": "UML2MOF_2",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "",
+                "path": ""
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": ""
+            }
+        ],
+        "atlFile": "",
+        "sample_models": [
+            {
+                "source": [
+                    "."
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

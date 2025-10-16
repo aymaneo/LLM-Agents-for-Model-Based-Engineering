@@ -1,0 +1,32 @@
+[
+    {
+        "name": "KM32Metrics",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/KM3.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/Metrics.ecore"
+            }
+        ],
+        "atlFile": "./Transfos/KM32Metrics.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Models/KM3-KM3.xmi"
+                ],
+                "target": [
+                    "./Models/KM3-Metrics.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Maven2Ant",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "INMaven",
+                "path": "./MM/MavenMaven.ecore"
+            },
+            {
+                "name": "INProject",
+                "path": "./MM/MavenProject.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./MM/Ant.ecore"
+            }
+        ],
+        "atlFile": "./transfos/Maven2Ant.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./example/mavenFile.xmi",
+                    "./example/projectFile.xmi"
+                ],
+                "target": [
+                    "./example/antFile.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

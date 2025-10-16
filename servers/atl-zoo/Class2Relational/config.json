@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Class2Relational",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Class/Class.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Relational/Relational.ecore"
+            }
+        ],
+        "atlFile": "./ATLFile/Class2Relational.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Class.xmi"
+                ],
+                "target": [
+                    "./Class/outClassXMI.xmi"
+                ]
+            }
+        ],
+        "libraries": [
+            {
+                "name": "strings",
+                "path": "../strings.asm"
+            }
+        ],
+        "enabled": "True"
+    }
+]

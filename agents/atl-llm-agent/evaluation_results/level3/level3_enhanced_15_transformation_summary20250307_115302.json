@@ -1,0 +1,12 @@
+{
+    "average_score": 46.62,
+    "by_level": {
+        "level_3": 46.62
+    },
+    "failed_matches": 161,
+    "multi_tool_accuracy": 44.25,
+    "partial_matches": 105,
+    "perfect_matches": 134,
+    "single_tool_accuracy": 49.0,
+    "total_examples": 400
+}

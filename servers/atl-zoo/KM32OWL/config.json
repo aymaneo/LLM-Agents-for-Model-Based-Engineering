@@ -1,0 +1,62 @@
+[
+    {
+        "name": "KM32OWL",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/KM3.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/OWL.ecore"
+            }
+        ],
+        "atlFile": "./Transformations/KM32OWL.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Samples/KM3-KM3.xmi"
+                ],
+                "target": [
+                    "./Samples/OWL-OWL.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "OWL2XML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/OWL.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/KM3.ecore"
+            }
+        ],
+        "atlFile": "./Transformations/OWL2XML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Samples/OWL-OWL.xmi"
+                ],
+                "target": [
+                    "./Samples/target2.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

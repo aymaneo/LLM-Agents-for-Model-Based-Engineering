@@ -1,0 +1,32 @@
+[
+    {
+        "name": "ATL2Tracer",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./ATL.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./ATL.ecore"
+            }
+        ],
+        "atlFile": "./ATL2Tracer/ATL2Tracer.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./ATL2Tracer/sample-ATL-0.2.xmi"
+                ],
+                "target": [
+                    "./targetTracer.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

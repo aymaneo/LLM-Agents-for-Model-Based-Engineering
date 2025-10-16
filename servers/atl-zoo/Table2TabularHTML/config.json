@@ -1,0 +1,61 @@
+[
+    {
+        "name": "HTML2XML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/HTML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/XML.ecore"
+            }
+        ],
+        "atlFile": "./transformations/HTML2XML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    ""
+                ],
+                "target": [
+                    "./models/example-Table.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "Table2TabularHTML",
+        "description": "",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/Table.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/HTML.ecore"
+            }
+        ],
+        "atlFile": "./transformations/Table2TabularHTML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./models/example-Table.xmi"
+                ],
+                "target": [
+                    "./models/example-TabularHTML.html"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "name": "XML2DSL",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/XML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/DSL.ecore"
+            }
+        ],
+        "atlFile": "./MetamodelBridge/Transfo/XML2DSL.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./MetamodelBridge/Models/SimpleExample/DSL2EMF/SimpleExampleMM-XML.xmi"
+                ],
+                "target": [
+                    "/MetamodelBridge/Models/SimpleExample/DSL2EMF/target3.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "KM32DSL",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/KM3.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/DSL.ecore"
+            }
+        ],
+        "atlFile": "./MetamodelBridge/Transfo/KM32DSL.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./MetamodelBridge/Models/SimpleExample/DSL2EMF/SimpleExampleMM-KM3.xmi"
+                ],
+                "target": [
+                    "./MetamodelBridge/Models/SimpleExample/DSL2EMF/target2.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "DSL2KM3",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/DSL.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/KM3.ecore"
+            }
+        ],
+        "atlFile": "./MetamodelBridge/Transfo/DSL2KM3.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./MetamodelBridge/Models/SimpleExample/DSL2EMF/SimpleExampleMM-DSL.xmi"
+                ],
+                "target": [
+                    "./MetamodelBridge/Models/SimpleExample/DSL2EMF/target.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

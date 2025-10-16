@@ -1,0 +1,32 @@
+[
+    {
+        "name": "KM32Problem",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/KM3.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/Problem.ecore"
+            }
+        ],
+        "atlFile": "./Transfos/KM32Problem.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Models/test-KM3.xmi"
+                ],
+                "target": [
+                    "./Models/problem.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

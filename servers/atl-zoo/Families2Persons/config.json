@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Families2Persons",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Families.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Persons.ecore"
+            }
+        ],
+        "atlFile": "./Families2Persons.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./sample-Families.xmi"
+                ],
+                "target": [
+                    "./sample-Persons.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

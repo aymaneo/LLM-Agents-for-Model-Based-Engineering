@@ -1,0 +1,32 @@
+[
+    {
+        "name": "KM32DOT",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./KM32DOT/Metamodels/KM3.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./KM32DOT/Metamodels/DOT.ecore"
+            }
+        ],
+        "atlFile": "./KM32DOT/Transformations/KM32DOT.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./KM32DOT/Models/KM3-KM3.xmi"
+                ],
+                "target": [
+                    "./KM32DOT/Models/target1.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

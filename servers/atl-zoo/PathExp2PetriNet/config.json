@@ -1,0 +1,182 @@
+[
+    {
+        "name": "PathExp2PetriNet",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/PathExp.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/PetriNet.ecore"
+            }
+        ],
+        "atlFile": "./ATL/PathExp2PetriNet.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Models/pathexp-example.xmi"
+                ],
+                "target": [
+                    "./Models/petrinet-example.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "PathExp2TextualPathExp",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/PathExp.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/TextualPathExp.ecore"
+            }
+        ],
+        "atlFile": "./ATL/PathExp2TextualPathExp.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Models/pathexp-example.xmi"
+                ],
+                "target": [
+                    "./Models/target1.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "PetriNet2PathExp",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/PetriNet.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/PathExp.ecore"
+            }
+        ],
+        "atlFile": "./ATL/PetriNet2PathExp.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Models/petrinet-example.xmi"
+                ],
+                "target": [
+                    "./Models/pathexp-example.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "PetriNet2XML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/PetriNet.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/XML.ecore"
+            }
+        ],
+        "atlFile": "./ATL/PetriNet2XML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Models/petrinet-example.xmi"
+                ],
+                "target": [
+                    "./Models/target2.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "TextualPathExp2PathExp",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/TextualPathExp.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/PathExp.ecore"
+            }
+        ],
+        "atlFile": "./ATL/TextualPathExp2PathExp.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Models/textualpathexp-example.xmi"
+                ],
+                "target": [
+                    "./Models/target3.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "XML2PetriNet",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodels/XML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodels/PetriNet.ecore"
+            }
+        ],
+        "atlFile": "./ATL/XML2PetriNet.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Models/xml-example.xmi"
+                ],
+                "target": [
+                    "./Models/target4.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "RedundantInheritance_with_context",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./KM3.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./KM3target.ecore"
+            }
+        ],
+        "atlFile": "./with_context/RedundantInheritance.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./with_context/InputModels/example-KM3.xmi"
+                ],
+                "target": [
+                    "./with_context/OutputModels/example-KM3target.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

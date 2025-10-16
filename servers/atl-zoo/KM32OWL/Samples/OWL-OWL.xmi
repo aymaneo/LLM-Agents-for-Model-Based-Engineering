@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="OWL" xmlns:_1="RDFS">
+  <OWLGraph ontology="/2">
+    <uriRef uri="/1"/>
+  </OWLGraph>
+  <_1:UniformResourceIdentifier name="" uriRef="/0/@uriRef.0"/>
+  <OWLOntology owlUniverse="/12 /14 /16 /18 /20 /22 /24 /26 /28 /30 /32 /34 /36 /38 /40 /42 /3" owlGraph="/0">
+    <uriRef uri="/5" fragmentIdentifier="/4"/>
+  </OWLOntology>
+  <OWLUniverse ontology="/2"/>
+  <_1:LocalName name="KM3" uriRef="/2/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="http://example.org/KM3" uriRef="/2/@uriRef.0"/>
+  <_1:RDFSDataType propertyForRange="/68 /86 /89 /104">
+    <uriRef uri="/7"/>
+  </_1:RDFSDataType>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#boolean" uriRef="/6/@uriRef.0"/>
+  <_1:RDFSDataType propertyForRange="/80 /83">
+    <uriRef uri="/9"/>
+  </_1:RDFSDataType>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/8/@uriRef.0"/>
+  <_1:RDFSDataType propertyForRange="/44 /47 /50 /53">
+    <uriRef uri="/11"/>
+  </_1:RDFSDataType>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#string" uriRef="/10/@uriRef.0"/>
+  <OWLClass subClassOf="/129 /133 /137" superClass="/14 /42" propertyForDomain="/44 /47 /50" ontology="/2">
+    <uriRef uri="/13"/>
+    <label lexicalForm="LocatedElement"/>
+  </OWLClass>
+  <_1:UniformResourceIdentifier name="LocatedElement" uriRef="/12/@uriRef.0"/>
+  <OWLClass subClassOf="/12 /142 /177" superClass="/16 /22 /28 /40" propertyForDomain="/53 /56" propertyForRange="/119" ontology="/2">
+    <uriRef uri="/15"/>
+    <label lexicalForm="ModelElement"/>
+  </OWLClass>
+  <_1:UniformResourceIdentifier name="ModelElement" uriRef="/14/@uriRef.0"/>
+  <OWLClass subClassOf="/14" superClass="/18 /20 /24 /26" propertyForRange="/92" ontology="/2">
+    <uriRef uri="/17"/>
+    <label lexicalForm="Classifier"/>
+  </OWLClass>
+  <_1:UniformResourceIdentifier name="Classifier" uriRef="/16/@uriRef.0"/>
+  <OWLClass subClassOf="/16" ontology="/2">
+    <uriRef uri="/19"/>
+    <label lexicalForm="DataType"/>
+  </OWLClass>
+  <_1:UniformResourceIdentifier name="DataType" uriRef="/18/@uriRef.0"/>
+  <OWLClass subClassOf="/16 /182" propertyForDomain="/59" propertyForRange="/62" ontology="/2">
+    <uriRef uri="/21"/>
+    <label lexicalForm="Enumeration"/>
+  </OWLClass>
+  <_1:UniformResourceIdentifier name="Enumeration" uriRef="/20/@uriRef.0"/>
+  <OWLClass subClassOf="/14 /187" propertyForDomain="/62" propertyForRange="/59" ontology="/2">
+    <uriRef uri="/23"/>
+    <label lexicalForm="EnumLiteral"/>
+  </OWLClass>
+  <_1:UniformResourceIdentifier name="EnumLiteral" uriRef="/22/@uriRef.0"/>
+  <OWLClass subClassOf="/16" propertyForRange="/65" ontology="/2">
+    <uriRef uri="/25"/>
+    <label lexicalForm="TemplateParameter"/>
+  </OWLClass>
+  <_1:UniformResourceIdentifier name="TemplateParameter" uriRef="/24/@uriRef.0"/>
+  <OWLClass subClassOf="/16 /147 /191 /195 /200 /205" propertyForDomain="/68 /65 /71 /74 /77" propertyForRange="/71 /95 /110" ontology="/2">
+    <uriRef uri="/27"/>
+    <label lexicalForm="Class"/>
+  </OWLClass>
+  <_1:UniformResourceIdentifier name="Class" uriRef="/26/@uriRef.0"/>
+  <OWLClass subClassOf="/14 /152 /157 /162 /167 /210" superClass="/30 /36 /38" propertyForDomain="/80 /83 /86 /89 /92" ontology="/2">
+    <uriRef uri="/29"/>
+    <label lexicalForm="TypedElement"/>
+  </OWLClass>
+  <_1:UniformResourceIdentifier name="TypedElement" uriRef="/28/@uriRef.0"/>
+  <OWLClass subClassOf="/28 /215 /220 /225" superClass="/32 /34" propertyForDomain="/95 /98 /101" propertyForRange="/74 /98 /101" ontology="/2">
+    <uriRef uri="/31"/>
+    <label lexicalForm="StructuralFeature"/>
+  </OWLClass>
+  <_1:UniformResourceIdentifier name="StructuralFeature" uriRef="/30/@uriRef.0"/>
+  <OWLClass subClassOf="/30" ontology="/2">
+    <uriRef uri="/33"/>
+    <label lexicalForm="Attribute"/>
+  </OWLClass>
+  <_1:UniformResourceIdentifier name="Attribute" uriRef="/32/@uriRef.0"/>
+  <OWLClass subClassOf="/30 /172 /229 /233" propertyForDomain="/104 /107" propertyForRange="/107" ontology="/2">
+    <uriRef uri="/35"/>
+    <label lexicalForm="Reference"/>
+  </OWLClass>
+  <_1:UniformResourceIdentifier name="Reference" uriRef="/34/@uriRef.0"/>
+  <OWLClass subClassOf="/28 /238 /243" propertyForDomain="/110 /113" propertyForRange="/77 /116" ontology="/2">
+    <uriRef uri="/37"/>
+    <label lexicalForm="Operation"/>
+  </OWLClass>
+  <_1:UniformResourceIdentifier name="Operation" uriRef="/36/@uriRef.0"/>
+  <OWLClass subClassOf="/28 /248" propertyForDomain="/116" propertyForRange="/113" ontology="/2">
+    <uriRef uri="/39"/>
+    <label lexicalForm="Parameter"/>
+  </OWLClass>
+  <_1:UniformResourceIdentifier name="Parameter" uriRef="/38/@uriRef.0"/>
+  <OWLClass subClassOf="/14 /253 /258" propertyForDomain="/119 /122" propertyForRange="/56 /125" ontology="/2">
+    <uriRef uri="/41"/>
+    <label lexicalForm="Package"/>
+  </OWLClass>
+  <_1:UniformResourceIdentifier name="Package" uriRef="/40/@uriRef.0"/>
+  <OWLClass subClassOf="/12 /263" propertyForDomain="/125" propertyForRange="/122" ontology="/2">
+    <uriRef uri="/43"/>
+    <label lexicalForm="Metamodel"/>
+  </OWLClass>
+  <_1:UniformResourceIdentifier name="Metamodel" uriRef="/42/@uriRef.0"/>
+  <OWLDatatypeProperty definedResource="/128" domain="/12" range="/10" propertyRestriction="/129">
+    <uriRef uri="/46" fragmentIdentifier="/45"/>
+  </OWLDatatypeProperty>
+  <_1:LocalName name="LocatedElement.location" uriRef="/44/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="LocatedElement.location" uriRef="/44/@uriRef.0"/>
+  <OWLDatatypeProperty domain="/12" range="/10" propertyRestriction="/133">
+    <uriRef uri="/49" fragmentIdentifier="/48"/>
+  </OWLDatatypeProperty>
+  <_1:LocalName name="LocatedElement.commentsBefore" uriRef="/47/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="LocatedElement.commentsBefore" uriRef="/47/@uriRef.0"/>
+  <OWLDatatypeProperty domain="/12" range="/10" propertyRestriction="/137">
+    <uriRef uri="/52" fragmentIdentifier="/51"/>
+  </OWLDatatypeProperty>
+  <_1:LocalName name="LocatedElement.commentsAfter" uriRef="/50/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="LocatedElement.commentsAfter" uriRef="/50/@uriRef.0"/>
+  <OWLDatatypeProperty definedResource="/141" domain="/14" range="/10" propertyRestriction="/142">
+    <uriRef uri="/55" fragmentIdentifier="/54"/>
+  </OWLDatatypeProperty>
+  <_1:LocalName name="ModelElement.name" uriRef="/53/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="ModelElement.name" uriRef="/53/@uriRef.0"/>
+  <OWLObjectProperty definedResource="/176" domain="/14" range="/40" propertyRestriction="/177" OWLInverseOf="/119" inverseProperty="/119">
+    <uriRef uri="/58" fragmentIdentifier="/57"/>
+  </OWLObjectProperty>
+  <_1:LocalName name="ModelElement.package" uriRef="/56/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="ModelElement.package" uriRef="/56/@uriRef.0"/>
+  <OWLObjectProperty definedResource="/181" domain="/20" range="/22" propertyRestriction="/182" OWLInverseOf="/62" inverseProperty="/62">
+    <uriRef uri="/61" fragmentIdentifier="/60"/>
+  </OWLObjectProperty>
+  <_1:LocalName name="Enumeration.literals" uriRef="/59/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="Enumeration.literals" uriRef="/59/@uriRef.0"/>
+  <OWLObjectProperty definedResource="/186" domain="/22" range="/20" propertyRestriction="/187" OWLInverseOf="/59" inverseProperty="/59">
+    <uriRef uri="/64" fragmentIdentifier="/63"/>
+  </OWLObjectProperty>
+  <_1:LocalName name="EnumLiteral.enum" uriRef="/62/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="EnumLiteral.enum" uriRef="/62/@uriRef.0"/>
+  <OWLObjectProperty domain="/26" range="/24" propertyRestriction="/191">
+    <uriRef uri="/67" fragmentIdentifier="/66"/>
+  </OWLObjectProperty>
+  <_1:LocalName name="Class.parameters" uriRef="/65/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="Class.parameters" uriRef="/65/@uriRef.0"/>
+  <OWLDatatypeProperty definedResource="/146" domain="/26" range="/6" propertyRestriction="/147">
+    <uriRef uri="/70" fragmentIdentifier="/69"/>
+  </OWLDatatypeProperty>
+  <_1:LocalName name="Class.isAbstract" uriRef="/68/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="Class.isAbstract" uriRef="/68/@uriRef.0"/>
+  <OWLObjectProperty domain="/26" range="/26" propertyRestriction="/195">
+    <uriRef uri="/73" fragmentIdentifier="/72"/>
+  </OWLObjectProperty>
+  <_1:LocalName name="Class.supertypes" uriRef="/71/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="Class.supertypes" uriRef="/71/@uriRef.0"/>
+  <OWLObjectProperty definedResource="/199" domain="/26" range="/30" propertyRestriction="/200" OWLInverseOf="/95" inverseProperty="/95">
+    <uriRef uri="/76" fragmentIdentifier="/75"/>
+  </OWLObjectProperty>
+  <_1:LocalName name="Class.structuralFeatures" uriRef="/74/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="Class.structuralFeatures" uriRef="/74/@uriRef.0"/>
+  <OWLObjectProperty definedResource="/204" domain="/26" range="/36" propertyRestriction="/205" OWLInverseOf="/110" inverseProperty="/110">
+    <uriRef uri="/79" fragmentIdentifier="/78"/>
+  </OWLObjectProperty>
+  <_1:LocalName name="Class.operations" uriRef="/77/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="Class.operations" uriRef="/77/@uriRef.0"/>
+  <OWLDatatypeProperty definedResource="/151" domain="/28" range="/8" propertyRestriction="/152">
+    <uriRef uri="/82" fragmentIdentifier="/81"/>
+  </OWLDatatypeProperty>
+  <_1:LocalName name="TypedElement.lower" uriRef="/80/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="TypedElement.lower" uriRef="/80/@uriRef.0"/>
+  <OWLDatatypeProperty definedResource="/156" domain="/28" range="/8" propertyRestriction="/157">
+    <uriRef uri="/85" fragmentIdentifier="/84"/>
+  </OWLDatatypeProperty>
+  <_1:LocalName name="TypedElement.upper" uriRef="/83/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="TypedElement.upper" uriRef="/83/@uriRef.0"/>
+  <OWLDatatypeProperty definedResource="/161" domain="/28" range="/6" propertyRestriction="/162">
+    <uriRef uri="/88" fragmentIdentifier="/87"/>
+  </OWLDatatypeProperty>
+  <_1:LocalName name="TypedElement.isOrdered" uriRef="/86/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="TypedElement.isOrdered" uriRef="/86/@uriRef.0"/>
+  <OWLDatatypeProperty definedResource="/166" domain="/28" range="/6" propertyRestriction="/167">
+    <uriRef uri="/91" fragmentIdentifier="/90"/>
+  </OWLDatatypeProperty>
+  <_1:LocalName name="TypedElement.isUnique" uriRef="/89/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="TypedElement.isUnique" uriRef="/89/@uriRef.0"/>
+  <OWLObjectProperty definedResource="/209" domain="/28" range="/16" propertyRestriction="/210">
+    <uriRef uri="/94" fragmentIdentifier="/93"/>
+  </OWLObjectProperty>
+  <_1:LocalName name="TypedElement.type" uriRef="/92/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="TypedElement.type" uriRef="/92/@uriRef.0"/>
+  <OWLObjectProperty definedResource="/214" domain="/30" range="/26" propertyRestriction="/215" OWLInverseOf="/74" inverseProperty="/74">
+    <uriRef uri="/97" fragmentIdentifier="/96"/>
+  </OWLObjectProperty>
+  <_1:LocalName name="StructuralFeature.owner" uriRef="/95/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="StructuralFeature.owner" uriRef="/95/@uriRef.0"/>
+  <OWLObjectProperty definedResource="/219" domain="/30" range="/30" propertyRestriction="/220" OWLInverseOf="/101" inverseProperty="/101">
+    <uriRef uri="/100" fragmentIdentifier="/99"/>
+  </OWLObjectProperty>
+  <_1:LocalName name="StructuralFeature.subsetOf" uriRef="/98/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="StructuralFeature.subsetOf" uriRef="/98/@uriRef.0"/>
+  <OWLObjectProperty definedResource="/224" domain="/30" range="/30" propertyRestriction="/225" OWLInverseOf="/98" inverseProperty="/98">
+    <uriRef uri="/103" fragmentIdentifier="/102"/>
+  </OWLObjectProperty>
+  <_1:LocalName name="StructuralFeature.derivedFrom" uriRef="/101/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="StructuralFeature.derivedFrom" uriRef="/101/@uriRef.0"/>
+  <OWLDatatypeProperty definedResource="/171" domain="/34" range="/6" propertyRestriction="/172">
+    <uriRef uri="/106" fragmentIdentifier="/105"/>
+  </OWLDatatypeProperty>
+  <_1:LocalName name="Reference.isContainer" uriRef="/104/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="Reference.isContainer" uriRef="/104/@uriRef.0"/>
+  <OWLObjectProperty domain="/34" range="/34" propertyRestriction="/229 /233">
+    <uriRef uri="/109" fragmentIdentifier="/108"/>
+  </OWLObjectProperty>
+  <_1:LocalName name="Reference.opposite" uriRef="/107/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="Reference.opposite" uriRef="/107/@uriRef.0"/>
+  <OWLObjectProperty definedResource="/237" domain="/36" range="/26" propertyRestriction="/238" OWLInverseOf="/77" inverseProperty="/77">
+    <uriRef uri="/112" fragmentIdentifier="/111"/>
+  </OWLObjectProperty>
+  <_1:LocalName name="Operation.owner" uriRef="/110/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="Operation.owner" uriRef="/110/@uriRef.0"/>
+  <OWLObjectProperty definedResource="/242" domain="/36" range="/38" propertyRestriction="/243" OWLInverseOf="/116" inverseProperty="/116">
+    <uriRef uri="/115" fragmentIdentifier="/114"/>
+  </OWLObjectProperty>
+  <_1:LocalName name="Operation.parameters" uriRef="/113/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="Operation.parameters" uriRef="/113/@uriRef.0"/>
+  <OWLObjectProperty definedResource="/247" domain="/38" range="/36" propertyRestriction="/248" OWLInverseOf="/113" inverseProperty="/113">
+    <uriRef uri="/118" fragmentIdentifier="/117"/>
+  </OWLObjectProperty>
+  <_1:LocalName name="Parameter.owner" uriRef="/116/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="Parameter.owner" uriRef="/116/@uriRef.0"/>
+  <OWLObjectProperty definedResource="/252" domain="/40" range="/14" propertyRestriction="/253" OWLInverseOf="/56" inverseProperty="/56">
+    <uriRef uri="/121" fragmentIdentifier="/120"/>
+  </OWLObjectProperty>
+  <_1:LocalName name="Package.contents" uriRef="/119/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="Package.contents" uriRef="/119/@uriRef.0"/>
+  <OWLObjectProperty definedResource="/257" domain="/40" range="/42" propertyRestriction="/258" OWLInverseOf="/125" inverseProperty="/125">
+    <uriRef uri="/124" fragmentIdentifier="/123"/>
+  </OWLObjectProperty>
+  <_1:LocalName name="Package.metamodel" uriRef="/122/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="Package.metamodel" uriRef="/122/@uriRef.0"/>
+  <OWLObjectProperty definedResource="/262" domain="/42" range="/40" propertyRestriction="/263" OWLInverseOf="/122" inverseProperty="/122">
+    <uriRef uri="/127" fragmentIdentifier="/126"/>
+  </OWLObjectProperty>
+  <_1:LocalName name="Metamodel.contents" uriRef="/125/@uriRef.0"/>
+  <_1:UniformResourceIdentifier name="Metamodel.contents" uriRef="/125/@uriRef.0"/>
+  <FunctionalProperty isDefinedBy="/44"/>
+  <CardinalityRestriction superClass="/12" OWLOnProperty="/44" OWLCardinality="/130"/>
+  <_1:TypedLiteral lexicalForm="1" datatypeURI="/131" cardinalityRestriction="/129"/>
+  <_1:URIReference uri="/132" literal="/130"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/131"/>
+  <MinCardinalityRestriction superClass="/12" OWLOnProperty="/47" OWLMinCardinality="/134"/>
+  <_1:TypedLiteral lexicalForm="0" datatypeURI="/135" minCardinalityRestriction="/133"/>
+  <_1:URIReference uri="/136" literal="/134"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/135"/>
+  <MinCardinalityRestriction superClass="/12" OWLOnProperty="/50" OWLMinCardinality="/138"/>
+  <_1:TypedLiteral lexicalForm="0" datatypeURI="/139" minCardinalityRestriction="/137"/>
+  <_1:URIReference uri="/140" literal="/138"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/139"/>
+  <FunctionalProperty isDefinedBy="/53"/>
+  <CardinalityRestriction superClass="/14" OWLOnProperty="/53" OWLCardinality="/143"/>
+  <_1:TypedLiteral lexicalForm="1" datatypeURI="/144" cardinalityRestriction="/142"/>
+  <_1:URIReference uri="/145" literal="/143"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/144"/>
+  <FunctionalProperty isDefinedBy="/68"/>
+  <CardinalityRestriction superClass="/26" OWLOnProperty="/68" OWLCardinality="/148"/>
+  <_1:TypedLiteral lexicalForm="1" datatypeURI="/149" cardinalityRestriction="/147"/>
+  <_1:URIReference uri="/150" literal="/148"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/149"/>
+  <FunctionalProperty isDefinedBy="/80"/>
+  <CardinalityRestriction superClass="/28" OWLOnProperty="/80" OWLCardinality="/153"/>
+  <_1:TypedLiteral lexicalForm="1" datatypeURI="/154" cardinalityRestriction="/152"/>
+  <_1:URIReference uri="/155" literal="/153"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/154"/>
+  <FunctionalProperty isDefinedBy="/83"/>
+  <CardinalityRestriction superClass="/28" OWLOnProperty="/83" OWLCardinality="/158"/>
+  <_1:TypedLiteral lexicalForm="1" datatypeURI="/159" cardinalityRestriction="/157"/>
+  <_1:URIReference uri="/160" literal="/158"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/159"/>
+  <FunctionalProperty isDefinedBy="/86"/>
+  <CardinalityRestriction superClass="/28" OWLOnProperty="/86" OWLCardinality="/163"/>
+  <_1:TypedLiteral lexicalForm="1" datatypeURI="/164" cardinalityRestriction="/162"/>
+  <_1:URIReference uri="/165" literal="/163"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/164"/>
+  <FunctionalProperty isDefinedBy="/89"/>
+  <CardinalityRestriction superClass="/28" OWLOnProperty="/89" OWLCardinality="/168"/>
+  <_1:TypedLiteral lexicalForm="1" datatypeURI="/169" cardinalityRestriction="/167"/>
+  <_1:URIReference uri="/170" literal="/168"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/169"/>
+  <FunctionalProperty isDefinedBy="/104"/>
+  <CardinalityRestriction superClass="/34" OWLOnProperty="/104" OWLCardinality="/173"/>
+  <_1:TypedLiteral lexicalForm="1" datatypeURI="/174" cardinalityRestriction="/172"/>
+  <_1:URIReference uri="/175" literal="/173"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/174"/>
+  <FunctionalProperty isDefinedBy="/56"/>
+  <CardinalityRestriction superClass="/14" OWLOnProperty="/56" OWLCardinality="/178"/>
+  <_1:TypedLiteral lexicalForm="1" datatypeURI="/179" cardinalityRestriction="/177"/>
+  <_1:URIReference uri="/180" literal="/178"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/179"/>
+  <InverseFunctionalProperty isDefinedBy="/59"/>
+  <MinCardinalityRestriction superClass="/20" OWLOnProperty="/59" OWLMinCardinality="/183"/>
+  <_1:TypedLiteral lexicalForm="0" datatypeURI="/184" minCardinalityRestriction="/182"/>
+  <_1:URIReference uri="/185" literal="/183"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/184"/>
+  <FunctionalProperty isDefinedBy="/62"/>
+  <CardinalityRestriction superClass="/22" OWLOnProperty="/62" OWLCardinality="/188"/>
+  <_1:TypedLiteral lexicalForm="1" datatypeURI="/189" cardinalityRestriction="/187"/>
+  <_1:URIReference uri="/190" literal="/188"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/189"/>
+  <MinCardinalityRestriction superClass="/26" OWLOnProperty="/65" OWLMinCardinality="/192"/>
+  <_1:TypedLiteral lexicalForm="0" datatypeURI="/193" minCardinalityRestriction="/191"/>
+  <_1:URIReference uri="/194" literal="/192"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/193"/>
+  <MinCardinalityRestriction superClass="/26" OWLOnProperty="/71" OWLMinCardinality="/196"/>
+  <_1:TypedLiteral lexicalForm="0" datatypeURI="/197" minCardinalityRestriction="/195"/>
+  <_1:URIReference uri="/198" literal="/196"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/197"/>
+  <InverseFunctionalProperty isDefinedBy="/74"/>
+  <MinCardinalityRestriction superClass="/26" OWLOnProperty="/74" OWLMinCardinality="/201"/>
+  <_1:TypedLiteral lexicalForm="0" datatypeURI="/202" minCardinalityRestriction="/200"/>
+  <_1:URIReference uri="/203" literal="/201"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/202"/>
+  <InverseFunctionalProperty isDefinedBy="/77"/>
+  <MinCardinalityRestriction superClass="/26" OWLOnProperty="/77" OWLMinCardinality="/206"/>
+  <_1:TypedLiteral lexicalForm="0" datatypeURI="/207" minCardinalityRestriction="/205"/>
+  <_1:URIReference uri="/208" literal="/206"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/207"/>
+  <FunctionalProperty isDefinedBy="/92"/>
+  <CardinalityRestriction superClass="/28" OWLOnProperty="/92" OWLCardinality="/211"/>
+  <_1:TypedLiteral lexicalForm="1" datatypeURI="/212" cardinalityRestriction="/210"/>
+  <_1:URIReference uri="/213" literal="/211"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/212"/>
+  <FunctionalProperty isDefinedBy="/95"/>
+  <CardinalityRestriction superClass="/30" OWLOnProperty="/95" OWLCardinality="/216"/>
+  <_1:TypedLiteral lexicalForm="1" datatypeURI="/217" cardinalityRestriction="/215"/>
+  <_1:URIReference uri="/218" literal="/216"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/217"/>
+  <SymmetricProperty isDefinedBy="/98"/>
+  <MinCardinalityRestriction superClass="/30" OWLOnProperty="/98" OWLMinCardinality="/221"/>
+  <_1:TypedLiteral lexicalForm="0" datatypeURI="/222" minCardinalityRestriction="/220"/>
+  <_1:URIReference uri="/223" literal="/221"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/222"/>
+  <SymmetricProperty isDefinedBy="/101"/>
+  <MinCardinalityRestriction superClass="/30" OWLOnProperty="/101" OWLMinCardinality="/226"/>
+  <_1:TypedLiteral lexicalForm="0" datatypeURI="/227" minCardinalityRestriction="/225"/>
+  <_1:URIReference uri="/228" literal="/226"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/227"/>
+  <MinCardinalityRestriction superClass="/34" OWLOnProperty="/107" OWLMinCardinality="/230"/>
+  <_1:TypedLiteral lexicalForm="0" datatypeURI="/231" minCardinalityRestriction="/229"/>
+  <_1:URIReference uri="/232" literal="/230"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/231"/>
+  <MaxCardinalityRestriction superClass="/34" OWLOnProperty="/107" OWLMaxCardinality="/234"/>
+  <_1:TypedLiteral lexicalForm="1" datatypeURI="/235" maxCardinalityRestriction="/233"/>
+  <_1:URIReference uri="/236" literal="/234"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/235"/>
+  <FunctionalProperty isDefinedBy="/110"/>
+  <CardinalityRestriction superClass="/36" OWLOnProperty="/110" OWLCardinality="/239"/>
+  <_1:TypedLiteral lexicalForm="1" datatypeURI="/240" cardinalityRestriction="/238"/>
+  <_1:URIReference uri="/241" literal="/239"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/240"/>
+  <InverseFunctionalProperty isDefinedBy="/113"/>
+  <MinCardinalityRestriction superClass="/36" OWLOnProperty="/113" OWLMinCardinality="/244"/>
+  <_1:TypedLiteral lexicalForm="0" datatypeURI="/245" minCardinalityRestriction="/243"/>
+  <_1:URIReference uri="/246" literal="/244"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/245"/>
+  <FunctionalProperty isDefinedBy="/116"/>
+  <CardinalityRestriction superClass="/38" OWLOnProperty="/116" OWLCardinality="/249"/>
+  <_1:TypedLiteral lexicalForm="1" datatypeURI="/250" cardinalityRestriction="/248"/>
+  <_1:URIReference uri="/251" literal="/249"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/250"/>
+  <InverseFunctionalProperty isDefinedBy="/119"/>
+  <MinCardinalityRestriction superClass="/40" OWLOnProperty="/119" OWLMinCardinality="/254"/>
+  <_1:TypedLiteral lexicalForm="0" datatypeURI="/255" minCardinalityRestriction="/253"/>
+  <_1:URIReference uri="/256" literal="/254"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/255"/>
+  <FunctionalProperty isDefinedBy="/122"/>
+  <CardinalityRestriction superClass="/40" OWLOnProperty="/122" OWLCardinality="/259"/>
+  <_1:TypedLiteral lexicalForm="1" datatypeURI="/260" cardinalityRestriction="/258"/>
+  <_1:URIReference uri="/261" literal="/259"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/260"/>
+  <InverseFunctionalProperty isDefinedBy="/125"/>
+  <MinCardinalityRestriction superClass="/42" OWLOnProperty="/125" OWLMinCardinality="/264"/>
+  <_1:TypedLiteral lexicalForm="0" datatypeURI="/265" minCardinalityRestriction="/263"/>
+  <_1:URIReference uri="/266" literal="/264"/>
+  <_1:UniformResourceIdentifier name="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" uriRef="/265"/>
+</xmi:XMI>

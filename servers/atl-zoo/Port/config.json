@@ -1,0 +1,122 @@
+[
+    {
+        "name": "TypeA2TypeB_v1",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodel/TypeA.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodel/TypeB.ecore"
+            }
+        ],
+        "atlFile": "./Transformations/TypeA2TypeB_v1.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./SampleModels/sample-TypeA.xmi"
+                ],
+                "target": [
+                    "./SampleModels/sample-TypeB.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "TypeA2TypeB_v2",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodel/TypeA.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodel/TypeB.ecore"
+            }
+        ],
+        "atlFile": "./Transformations/TypeA2TypeB_v2.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./SampleModels/sample-TypeA.xmi"
+                ],
+                "target": [
+                    "./SampleModels/sample-TypeB.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "TypeB2TypeA_v3",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodel/TypeB.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodel/TypeA.ecore"
+            }
+        ],
+        "atlFile": "./Transformations/TypeB2TypeA_v3.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./SampleModels/sample-TypeB.xmi"
+                ],
+                "target": [
+                    "./SampleModels/sample-TypeA.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "TypeB2TypeA_v4",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Metamodel/TypeB.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./Metamodel/TypeA.ecore"
+            }
+        ],
+        "atlFile": "./Transformations/TypeB2TypeA_v4.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./SampleModels/sample-TypeB.xmi"
+                ],
+                "target": [
+                    "./SampleModels/sample-TypeA.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

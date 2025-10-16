@@ -1,0 +1,665 @@
+[
+    {
+        "name": "KM32EMF",
+        "input_metamodels": [
+            "KM3"
+        ],
+        "output_metamodels": [
+            "Ecore"
+        ],
+        "source_models": [
+            "./atl_zoo/KM32EMF/Sample-KM3.xmi"
+        ]
+    },
+    {
+        "name": "XML2SpreadsheetMLSimplified",
+        "input_metamodels": [
+            "XML"
+        ],
+        "output_metamodels": [
+            "MSOfficeExcel_SpreadsheetMLSimplified"
+        ],
+        "source_models": [
+            "./atl_zoo/MicrosoftOfficeExcelInjector/modelsExamples/ExcelXMLFileExample.xml"
+        ]
+    },
+    {
+        "name": "Book2Publication",
+        "input_metamodels": [
+            "Book"
+        ],
+        "output_metamodels": [
+            "Publication"
+        ],
+        "source_models": [
+            "./atl_zoo/Book2Publication/Book/modelBook.xmi"
+        ]
+    },
+    {
+        "name": "XML2Book",
+        "input_metamodels": [
+            "XML"
+        ],
+        "output_metamodels": [
+            "Book"
+        ],
+        "source_models": [
+            "./atl_zoo/Book2Publication/XML/inputModelXML.xmi"
+        ]
+    },
+    {
+        "name": "Partial2totalRoleA",
+        "input_metamodels": [
+            "KM3"
+        ],
+        "output_metamodels": [
+            "KM3target"
+        ],
+        "source_models": [
+            "./atl_zoo/MakePartialRoleTotal/MakingPartialRolesTotalA/with_context/InputModels/example-KM3.xmi"
+        ]
+    },
+    {
+        "name": "Partial2totalRoleB",
+        "input_metamodels": [
+            "KM3"
+        ],
+        "output_metamodels": [
+            "KM3target"
+        ],
+        "source_models": [
+            "./atl_zoo/MakePartialRoleTotal/MakingPartialRolesTotalB/with_context/InputModels/exampleB-KM3.xmi"
+        ]
+    },
+    {
+        "name": "XML2R2ML",
+        "input_metamodels": [
+            "XML"
+        ],
+        "output_metamodels": [
+            "r2ml"
+        ],
+        "source_models": [
+            "./atl_zoo/R2ML2OCL/build1.xmi"
+        ]
+    },
+    {
+        "name": "PrimaryKey_with_context",
+        "input_metamodels": [
+            "KM3"
+        ],
+        "output_metamodels": [
+            "KM3"
+        ],
+        "source_models": [
+            "./atl_zoo/IntroducePrimaryKey/with_context/build_example.xml"
+        ]
+    },
+    {
+        "name": "KM32DOT",
+        "input_metamodels": [
+            "KM3"
+        ],
+        "output_metamodels": [
+            "DOT"
+        ],
+        "source_models": [
+            "./atl_zoo/KM32DOT/KM32DOT/Models/KM3-KM3.xmi"
+        ]
+    },
+    {
+        "name": "R2ML2WSDL",
+        "input_metamodels": [
+            "R2ML"
+        ],
+        "output_metamodels": [
+            "WSDL"
+        ],
+        "source_models": [
+            "./atl_zoo/WSDL2R2ML/outModels/XML2R2ML/xml2r2ml_model.xmi"
+        ]
+    },
+    {
+        "name": "XML2R2ML",
+        "input_metamodels": [
+            "XML"
+        ],
+        "output_metamodels": [
+            "R2ML"
+        ],
+        "source_models": [
+            "./atl_zoo/WSDL2R2ML/outModels/XML2R2ML/xml2r2ml_model.xmi"
+        ]
+    },
+    {
+        "name": "XML2WSDL",
+        "input_metamodels": [
+            "XML"
+        ],
+        "output_metamodels": [
+            "WSDL"
+        ],
+        "source_models": [
+            "./atl_zoo/WSDL2R2ML/outModels/XML2WSDL/xml2wsdl_model.xmi"
+        ]
+    },
+    {
+        "name": "ATOM2RSS",
+        "input_metamodels": [
+            "ATOM"
+        ],
+        "output_metamodels": [
+            "RSS"
+        ],
+        "source_models": [
+            "./atl_zoo/RSS2ATOM/ATOM/Exemple-ATOM.xmi"
+        ]
+    },
+    {
+        "name": "XML2RSS",
+        "input_metamodels": [
+            "XML"
+        ],
+        "output_metamodels": [
+            "RSS"
+        ],
+        "source_models": [
+            "./atl_zoo/RSS2ATOM/XML/Exemple1-XML.xmi"
+        ]
+    },
+    {
+        "name": "Make2Ant",
+        "input_metamodels": [
+            "Make"
+        ],
+        "output_metamodels": [
+            "Ant"
+        ],
+        "source_models": [
+            "./atl_zoo/Make2Ant/example/makeFileMake.xmi"
+        ]
+    },
+    {
+        "name": "Ant2XML",
+        "input_metamodels": [
+            "Ant"
+        ],
+        "output_metamodels": [
+            "XML"
+        ],
+        "source_models": [
+            "./atl_zoo/Make2Ant/example/antFile.xmi"
+        ]
+    },
+    {
+        "name": "XML2Make",
+        "input_metamodels": [
+            "XML"
+        ],
+        "output_metamodels": [
+            "Make"
+        ],
+        "source_models": [
+            "./atl_zoo/Make2Ant/example/makeFile.xmi"
+        ]
+    },
+    {
+        "name": "SimpleClass2SimpleRDBMS",
+        "input_metamodels": [
+            "SimpleClass"
+        ],
+        "output_metamodels": [
+            "SimpleRDBMS"
+        ],
+        "source_models": [
+            "./atl_zoo/SimpleClass2SimpleRDBMS/Sample-SimpleClass.xmi"
+        ]
+    },
+    {
+        "name": "KM32OWL",
+        "input_metamodels": [
+            "KM3"
+        ],
+        "output_metamodels": [
+            "OWL"
+        ],
+        "source_models": [
+            "./atl_zoo/KM32OWL/Samples/KM3-KM3.xmi"
+        ]
+    },
+    {
+        "name": "XML2MySQL",
+        "input_metamodels": [
+            "XML"
+        ],
+        "output_metamodels": [
+            "MySQL"
+        ],
+        "source_models": [
+            "./atl_zoo/MySQL2KM3/Models/euro2004-XML.xmi"
+        ]
+    },
+    {
+        "name": "MySQL2KM3",
+        "input_metamodels": [
+            "MySQL"
+        ],
+        "output_metamodels": [
+            "KM3"
+        ],
+        "source_models": [
+            "./atl_zoo/MySQL2KM3/Models/euro2004-MySQL.xmi"
+        ]
+    },
+    {
+        "name": "Uml2Amble",
+        "input_metamodels": [
+            "UMLDI"
+        ],
+        "output_metamodels": [
+            "Amble"
+        ],
+        "source_models": [
+            "./atl_zoo/Uml2Amble/UMLDI.xmi"
+        ]
+    },
+    {
+        "name": "XML2XSLT",
+        "input_metamodels": [
+            "XML"
+        ],
+        "output_metamodels": [
+            "XSLT"
+        ],
+        "source_models": [
+            "./atl_zoo/XSLT2XQuery/XML/tr.xsl-XML.xmi"
+        ]
+    },
+    {
+        "name": "XSLT2XQuery",
+        "input_metamodels": [
+            "XSLT"
+        ],
+        "output_metamodels": [
+            "XQuery"
+        ],
+        "source_models": [
+            "./atl_zoo/XSLT2XQuery/XSLT/test-XSLT.xmi"
+        ]
+    },
+    {
+        "name": "Mantis2XML",
+        "input_metamodels": [
+            "Mantis"
+        ],
+        "output_metamodels": [
+            "XML"
+        ],
+        "source_models": [
+            "./atl_zoo/SoftwareQualityControl2MantisBTFile/modelsExamples/MantisExample.xmi"
+        ]
+    },
+    {
+        "name": "Families2Persons",
+        "input_metamodels": [
+            "Families"
+        ],
+        "output_metamodels": [
+            "Persons"
+        ],
+        "source_models": [
+            "./atl_zoo/Families2Persons/sample-Families.xmi"
+        ]
+    },
+    {
+        "name": "RedundantInheritance_with_context",
+        "input_metamodels": [
+            "KM3"
+        ],
+        "output_metamodels": [
+            "KM3target"
+        ],
+        "source_models": [
+            "./atl_zoo/EliminateRedundantInheritance/with_context/InputModels/example-KM3.xmi"
+        ]
+    },
+    {
+        "name": "PathExp2PetriNet",
+        "input_metamodels": [
+            "PathExp"
+        ],
+        "output_metamodels": [
+            "PetriNet"
+        ],
+        "source_models": [
+            "./atl_zoo/PathExp2PetriNet/Models/pathexp-example.xmi"
+        ]
+    },
+    {
+        "name": "PathExp2TextualPathExp",
+        "input_metamodels": [
+            "PathExp"
+        ],
+        "output_metamodels": [
+            "TextualPathExp"
+        ],
+        "source_models": [
+            "./atl_zoo/PathExp2PetriNet/Models/pathexp-example.xmi"
+        ]
+    },
+    {
+        "name": "PetriNet2PathExp",
+        "input_metamodels": [
+            "PetriNet"
+        ],
+        "output_metamodels": [
+            "PathExp"
+        ],
+        "source_models": [
+            "./atl_zoo/PathExp2PetriNet/Models/petrinet-example.xmi"
+        ]
+    },
+    {
+        "name": "PetriNet2XML",
+        "input_metamodels": [
+            "PetriNet"
+        ],
+        "output_metamodels": [
+            "XML"
+        ],
+        "source_models": [
+            "./atl_zoo/PathExp2PetriNet/Models/petrinet-example.xmi"
+        ]
+    },
+    {
+        "name": "TextualPathExp2PathExp",
+        "input_metamodels": [
+            "TextualPathExp"
+        ],
+        "output_metamodels": [
+            "PathExp"
+        ],
+        "source_models": [
+            "./atl_zoo/PathExp2PetriNet/Models/textualpathexp-example.xmi"
+        ]
+    },
+    {
+        "name": "XML2PetriNet",
+        "input_metamodels": [
+            "XML"
+        ],
+        "output_metamodels": [
+            "PetriNet"
+        ],
+        "source_models": [
+            "./atl_zoo/PathExp2PetriNet/Models/xml-example.xmi"
+        ]
+    },
+    {
+        "name": "Grafcet2PetriNet",
+        "input_metamodels": [
+            "Grafcet"
+        ],
+        "output_metamodels": [
+            "PetriNet"
+        ],
+        "source_models": [
+            "./atl_zoo/Grafcet2PetriNet/Models/example.xmi"
+        ]
+    },
+    {
+        "name": "PetriNet2Grafcet",
+        "input_metamodels": [
+            "PetriNet"
+        ],
+        "output_metamodels": [
+            "Grafcet"
+        ],
+        "source_models": [
+            "./atl_zoo/Grafcet2PetriNet/Models/Grafcet2PetriNet_example.xmi"
+        ]
+    },
+    {
+        "name": "PNML2PetriNet",
+        "input_metamodels": [
+            "PNML"
+        ],
+        "output_metamodels": [
+            "PetriNet"
+        ],
+        "source_models": [
+            "./atl_zoo/Grafcet2PetriNet/Models/PetriNet2PNML_example.xmi"
+        ]
+    },
+    {
+        "name": "PetriNet2PNML",
+        "input_metamodels": [
+            "PetriNet"
+        ],
+        "output_metamodels": [
+            "PNML"
+        ],
+        "source_models": [
+            "./atl_zoo/Grafcet2PetriNet/Models/PNML2PetriNet_example.xmi"
+        ]
+    },
+    {
+        "name": "PNML2XML",
+        "input_metamodels": [
+            "PNML"
+        ],
+        "output_metamodels": [
+            "XML"
+        ],
+        "source_models": [
+            "./atl_zoo/Grafcet2PetriNet/Models/XML2PNML_example.xmi"
+        ]
+    },
+    {
+        "name": "XML2PNML",
+        "input_metamodels": [
+            "XML"
+        ],
+        "output_metamodels": [
+            "PNML"
+        ],
+        "source_models": [
+            "./atl_zoo/Grafcet2PetriNet/Models/PNML2XML_example.xmi"
+        ]
+    },
+    {
+        "name": "XML2R2ML",
+        "input_metamodels": [
+            "XML"
+        ],
+        "output_metamodels": [
+            "r2ml"
+        ],
+        "source_models": [
+            "./atl_zoo/R2ML2SWRL"
+        ]
+    },
+    {
+        "name": "KM32Metrics",
+        "input_metamodels": [
+            "KM3"
+        ],
+        "output_metamodels": [
+            "Metrics"
+        ],
+        "source_models": [
+            "./atl_zoo/KM32Metrics/Models/KM3-KM3.xmi"
+        ]
+    },
+    {
+        "name": "Class2Relational",
+        "input_metamodels": [
+            "Class"
+        ],
+        "output_metamodels": [
+            "Relational"
+        ],
+        "source_models": [
+            "./atl_zoo/Class2Relational/Class.xmi"
+        ]
+    },
+    {
+        "name": "Maven2Ant",
+        "input_metamodels": [
+            "MavenMaven",
+            "MavenProject"
+        ],
+        "output_metamodels": [
+            "Ant"
+        ],
+        "source_models": [
+            "./atl_zoo/Maven2Ant/example/mavenFile.xmi",
+            "./atl_zoo/Maven2Ant/example/projectFile.xmi"
+        ]
+    },
+    {
+        "name": "XML2KML",
+        "input_metamodels": [
+            "XML"
+        ],
+        "output_metamodels": [
+            "KML"
+        ],
+        "source_models": [
+            "./atl_zoo/KMLInjector/InputModels/example-XML.xmi"
+        ]
+    },
+    {
+        "name": "XML2DXF",
+        "input_metamodels": [
+            "XML"
+        ],
+        "output_metamodels": [
+            "DXF"
+        ],
+        "source_models": [
+            "./atl_zoo/Geometry/cube.xmi"
+        ]
+    },
+    {
+        "name": "XML2GeoTrans",
+        "input_metamodels": [
+            "XML"
+        ],
+        "output_metamodels": [
+            "GeoTrans"
+        ],
+        "source_models": [
+            "./atl_zoo/Geometry/TransfoCommands.xmi"
+        ]
+    },
+    {
+        "name": "XML2DSL",
+        "input_metamodels": [
+            "XML"
+        ],
+        "output_metamodels": [
+            "DSL"
+        ],
+        "source_models": [
+            "./atl_zoo/DSLBridge/MetamodelBridge/Models/SimpleExample/DSL2EMF/SimpleExampleMM-XML.xmi"
+        ]
+    },
+    {
+        "name": "KM32DSL",
+        "input_metamodels": [
+            "KM3"
+        ],
+        "output_metamodels": [
+            "DSL"
+        ],
+        "source_models": [
+            "./atl_zoo/DSLBridge/MetamodelBridge/Models/SimpleExample/DSL2EMF/SimpleExampleMM-KM3.xmi"
+        ]
+    },
+    {
+        "name": "DSL2KM3",
+        "input_metamodels": [
+            "DSL"
+        ],
+        "output_metamodels": [
+            "KM3"
+        ],
+        "source_models": [
+            "./atl_zoo/DSLBridge/MetamodelBridge/Models/SimpleExample/DSL2EMF/SimpleExampleMM-DSL.xmi"
+        ]
+    },
+    {
+        "name": "Ant2Maven",
+        "input_metamodels": [
+            "Ant"
+        ],
+        "output_metamodels": [
+            "MavenMaven",
+            "MavenProject"
+        ],
+        "source_models": [
+            "./atl_zoo/Ant2Maven/example/build1Ant.xmi"
+        ]
+    },
+    {
+        "name": "XML2Ant",
+        "input_metamodels": [
+            "XML"
+        ],
+        "output_metamodels": [
+            "Ant"
+        ],
+        "source_models": [
+            "./atl_zoo/Ant2Maven/example/build1.xmi"
+        ]
+    },
+    {
+        "name": "KM32Problem",
+        "input_metamodels": [
+            "KM3"
+        ],
+        "output_metamodels": [
+            "Problem"
+        ],
+        "source_models": [
+            "./atl_zoo/KM32Problem/Models/test-KM3.xmi"
+        ]
+    },
+    {
+        "name": "A2B",
+        "input_metamodels": [
+            "A"
+        ],
+        "output_metamodels": [
+            "B"
+        ],
+        "source_models": [
+            "./atl_zoo/ListMetamodelRefactoring/SampleModels/RootA.xmi"
+        ]
+    },
+    {
+        "name": "METAH2ACME",
+        "input_metamodels": [
+            "METAH"
+        ],
+        "output_metamodels": [
+            "ACME"
+        ],
+        "source_models": [
+            "./atl_zoo/METAH2ACME/MODELS/example-METAH.xmi"
+        ]
+    },
+    {
+        "name": "JavaSource2Table",
+        "input_metamodels": [
+            "JavaSource"
+        ],
+        "output_metamodels": [
+            "Table"
+        ],
+        "source_models": [
+            "./atl_zoo/JavaSource2Table/javaSource-example.xmi"
+        ]
+    }
+]

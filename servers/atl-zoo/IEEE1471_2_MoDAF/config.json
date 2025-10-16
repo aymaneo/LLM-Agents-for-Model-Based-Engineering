@@ -1,0 +1,32 @@
+[
+    {
+        "name": "IEEE1471_2_MoDAF",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodel/IEEE1471ConceptualModel.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodel/MoDAF-AV.ecore"
+            }
+        ],
+        "atlFile": "./transformation/IEEE1471_2_MoDAF.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./example/sample-IEEE1471.xmi"
+                ],
+                "target": [
+                    "./example/sample-MoDAF.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

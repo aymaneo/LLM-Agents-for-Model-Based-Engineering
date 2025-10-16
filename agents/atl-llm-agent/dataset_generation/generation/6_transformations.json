@@ -1,0 +1,75 @@
+[
+    {
+        "name": "KM32EMF",
+        "input_metamodels": [
+            "KM3"
+        ],
+        "output_metamodels": [
+            "Ecore"
+        ],
+        "source_models": [
+            "./atl_zoo/KM32EMF/Sample-KM3.xmi"
+        ]
+    },
+    {
+        "name": "KM32DSL",
+        "input_metamodels": [
+            "KM3"
+        ],
+        "output_metamodels": [
+            "DSL"
+        ],
+        "source_models": [
+            "./atl_zoo/DSLBridge/MetamodelBridge/Models/SimpleExample/DSL2EMF/SimpleExampleMM-KM3.xmi"
+        ]
+    },
+    {
+        "name": "PNML2XML",
+        "input_metamodels": [
+            "PNML"
+        ],
+        "output_metamodels": [
+            "XML"
+        ],
+        "source_models": [
+            "./atl_zoo/Grafcet2PetriNet/Models/XML2PNML_example.xmi"
+        ]
+    },
+{
+        "name": "Mantis2XML",
+        "input_metamodels": [
+            "Mantis"
+        ],
+        "output_metamodels": [
+            "XML"
+        ],
+        "source_models": [
+            "./atl_zoo/SoftwareQualityControl2MantisBTFile/modelsExamples/MantisExample.xmi"
+        ]
+    },
+    {
+        "name": "XML2Ant",
+        "input_metamodels": [
+            "XML"
+        ],
+        "output_metamodels": [
+            "Ant"
+        ],
+        "source_models": [
+            "./atl_zoo/Ant2Maven/example/build1.xmi"
+        ]
+    },
+
+{
+        "name": "SimpleClass2SimpleRDBMS",
+        "input_metamodels": [
+            "SimpleClass"
+        ],
+        "output_metamodels": [
+            "SimpleRDBMS"
+        ],
+        "source_models": [
+            "./atl_zoo/SimpleClass2SimpleRDBMS/Sample-SimpleClass.xmi"
+        ]
+    }
+]

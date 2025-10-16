@@ -1,0 +1,90 @@
+[
+    {
+        "name": "SpreadsheetMLSimplified2XML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/MSOfficeExcel_SpreadsheetMLSimplified.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/XML.ecore"
+            }
+        ],
+        "atlFile": "./transformations/SpreadsheetMLSimplified2XML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./modelsExamples/ExcelModelExample.xmi"
+                ],
+                "target": [
+                    "./modelsExamples/XMLModelExample.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "Table2SpreadsheetMLSimplified",
+        "description": "",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/Table.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/MSOfficeExcel_SpreadsheetMLSimplified.ecore"
+            }
+        ],
+        "atlFile": "./transformations/Table2SpreadsheetMLSimplified.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./modelsExamples/TableModelExample.xmi"
+                ],
+                "target": [
+                    "./modelsExamples/ExcelModelExample.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "XML2ExcelText",
+        "description": "",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/XML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/MSOfficeExcel_SpreadsheetMLSimplified.ecore"
+            }
+        ],
+        "atlFile": "./transformations/XML2ExcelText.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./modelsExamples/XMLModelExample.xmi"
+                ],
+                "target": [
+                    "./modelsExamples/ExcelModelExample.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "SimpleClass2SimpleRDBMS",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./SimpleClass.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./SimpleRDBMS.ecore"
+            }
+        ],
+        "atlFile": "./SimpleClass2SimpleRDBMS.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Sample-SimpleClass.xmi"
+                ],
+                "target": [
+                    "./Sample-SimpleRDBMS.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

@@ -1,0 +1,61 @@
+[
+    {
+        "name": "Syntax2SimpleSBVR",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./Syntax/Syntax.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./SimpleSBVR/SimpleSBVR.ecore"
+            }
+        ],
+        "atlFile": "./Syntax2SimpleSBVR.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Samples/Syntax-1-2-3.xmi"
+                ],
+                "target": [
+                    "./Samples/SimpleSBVR-1-2-3.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "SimpleSBVR2SimpleUML",
+        "description": "",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./SimpleSBVR/SimpleSBVR.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./SimpleUML/SimpleUML.ecore"
+            }
+        ],
+        "atlFile": "./SimpleSBVR2SimpleUML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./Samples/SimpleSBVR-1-2-3.xmi"
+                ],
+                "target": [
+                    "./Samples/SimpleUML-1-2-3.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

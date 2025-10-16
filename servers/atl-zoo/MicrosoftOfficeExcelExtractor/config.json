@@ -1,0 +1,32 @@
+[
+    {
+        "name": "SpreadsheetMLSipmlified2XML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/MSOfficeExcel_SpreadsheetMLSimplified.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/XML.ecore"
+            }
+        ],
+        "atlFile": "./transformations/SpreadsheetMLSipmlified2XML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./modelsExamples./ExcelModelExample.xmi"
+                ],
+                "target": [
+                    "./modelsExamples/XMLModelExample.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    }
+]

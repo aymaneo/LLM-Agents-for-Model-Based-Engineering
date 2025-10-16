@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Make2Ant",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./MM/Make.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./MM/Ant.ecore"
+            }
+        ],
+        "atlFile": "./Transfos/Make2Ant.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./example/makeFileMake.xmi"
+                ],
+                "target": [
+                    "./example/antFile.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "Ant2XML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./MM/Ant.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./MM/XML.ecore"
+            }
+        ],
+        "atlFile": "./Transfos/Ant2XML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./example/antFile.xmi"
+                ],
+                "target": [
+                    "./example/target2.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "XML2Make",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./MM/XML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./MM/Make.ecore"
+            }
+        ],
+        "atlFile": "./Transfos/XML2Make.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./example/makeFile.xmi"
+                ],
+                "target": [
+                    "./example/target4.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]

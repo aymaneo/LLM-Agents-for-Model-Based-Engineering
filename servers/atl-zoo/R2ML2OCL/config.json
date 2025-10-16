@@ -1,0 +1,76 @@
+[
+    {
+        "name": "XML2R2ML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/xml/XML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/r2ml/r2ml.ecore"
+            }
+        ],
+        "atlFile": "./transformations/XML2R2ML/XML2R2ML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./build1.xmi"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [
+            {
+                "name": "strings",
+                "path": "../strings.asm"
+            },
+            {
+                "name": "XMLHelpers",
+                "path": "./transformations/XML2R2ML/XMLHelpers.atl"
+            }
+        ],
+        "enabled": "True"
+    },
+    {
+        "name": "R2ML2OCL",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./metamodels/r2ml/r2ml.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./metamodels/ocl/OCL.ecore"
+            }
+        ],
+        "atlFile": "./transformations/R2ML2OCL/R2ML2OCL.atl",
+        "sample_models": [
+            {
+                "source": [
+                    ""
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [
+            {
+                "name": "strings",
+                "path": "../strings.asm"
+            }
+        ],
+        "enabled": "False"
+    }
+]

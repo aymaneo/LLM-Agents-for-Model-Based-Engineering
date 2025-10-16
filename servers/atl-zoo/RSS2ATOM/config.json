@@ -1,0 +1,182 @@
+[
+    {
+        "name": "ATOM2RSS",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./ATOM/ATOM.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./RSS/RSS.ecore"
+            }
+        ],
+        "atlFile": "./ATLTransformations/ATOM2RSS.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./ATOM/Exemple-ATOM.xmi"
+                ],
+                "target": [
+                    "./ATOM/target2.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    },
+    {
+        "name": "RSS2ATOM",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./RSS/RSS.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./ATOM/ATOM.ecore"
+            }
+        ],
+        "atlFile": "./ATLTransformations/RSS2ATOM.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./RSS/Exemple-RSS.xmi"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "ATOM2XML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./ATOM/ATOM.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./XML/XML.ecore"
+            }
+        ],
+        "atlFile": "./ATLTransformations/ATOM2XML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./ATOM/Exemple-ATOM.xmi"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "XML2ATOM",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./XML/XML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./ATOM/ATOM.ecore"
+            }
+        ],
+        "atlFile": "./ATLTransformations/XML2ATOM.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./XML//Exemple1-XML.xmi"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "RSS2XML",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./RSS/RSS.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./XML/XML.ecore"
+            }
+        ],
+        "atlFile": "./ATLTransformations/RSS2XML.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./RSS/Exemple-RSS.xmi"
+                ],
+                "target": [
+                    ""
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "False"
+    },
+    {
+        "name": "XML2RSS",
+        "description": "",
+        "compiler": "EMFVM",
+        "input_metamodels": [
+            {
+                "name": "IN",
+                "path": "./XML/XML.ecore"
+            }
+        ],
+        "output_metamodels": [
+            {
+                "name": "OUT",
+                "path": "./RSS/RSS.ecore"
+            }
+        ],
+        "atlFile": "./ATLTransformations/XML2RSS.atl",
+        "sample_models": [
+            {
+                "source": [
+                    "./XML//Exemple1-XML.xmi"
+                ],
+                "target": [
+                    "./XML/target1.xmi"
+                ]
+            }
+        ],
+        "libraries": [],
+        "enabled": "True"
+    }
+]
