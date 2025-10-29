@@ -8,6 +8,7 @@ from typing import Any, Dict, Iterable, List, Optional
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, SystemMessage
 from langchain_core.tools import tool
 from langchain_ollama import ChatOllama
+from langgraph.errors import GraphRecursionError
 from langgraph.prebuilt import create_react_agent
 
 from .mcp_client import MCPClient
@@ -31,10 +32,12 @@ class EMFStatelessAgent:
         model_name: Optional[str] = None,
         temperature: Optional[float] = None,
         max_tokens: Optional[int] = None,
+        recursion_limit: int = 60,
     ) -> None:
         self._client = client
         self._metamodel_path = metamodel_path
         self._max_tokens = max_tokens
+        self._recursion_limit = recursion_limit
 
         self._session = None
         self._session_id: Optional[str] = None
@@ -275,7 +278,18 @@ class EMFStatelessAgent:
         state_input = {
             "messages": messages + [HumanMessage(content=user_message)]
         }
-        self._state = await self._agent.ainvoke(state_input)
+
+        try:
+            self._state = await self._agent.ainvoke(
+                state_input,
+                config={"recursion_limit": self._recursion_limit},
+            )
+        except GraphRecursionError:
+            warning = (
+                "Recursion limit reached while planning tool calls. "
+                "Consider simplifying the request or increasing the recursion_limit."
+            )
+            return {"answer": warning, "messages": []}
 
         messages = self._state.get("messages", [])
         new_messages = messages[previous_count:]

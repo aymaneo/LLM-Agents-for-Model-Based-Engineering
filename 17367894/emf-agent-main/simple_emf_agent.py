@@ -43,6 +43,12 @@ def parse_args() -> argparse.Namespace:
         help="Optional max tokens for each model response.",
     )
     parser.add_argument(
+        "--recursion-limit",
+        type=int,
+        default=60,
+        help="Maximum LangGraph recursion depth for a single request (default: 60).",
+    )
+    parser.add_argument(
         "--python",
         dest="python_exec",
         default=None,
@@ -110,6 +116,7 @@ async def run() -> int:
             model_name=args.model,
             temperature=args.temperature,
             max_tokens=args.max_tokens,
+            recursion_limit=args.recursion_limit,
         )
         await agent.initialize()
 
