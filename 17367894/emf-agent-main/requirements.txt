@@ -9,3 +9,5 @@ matplotlib
 fastapi
 mcp
 langchain-mcp-adapters
+langchain-openai
+python-dotenv

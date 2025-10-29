@@ -8,6 +8,9 @@ First, create a new session by uploading your EMF metamodel (.ecore file):
 curl -X POST -F "file=@/path/to/your/metamodel.ecore" \
   http://localhost:8095/metamodel/start
 ```
+curl -X POST \
+  -F "file=@/Users/aymane/Documents/AI/LLM-Agents-for-Model-Based-Engineering/Paper Artifacts SAM 2025/atl_zoo-master/Families2Persons/Families.ecore" \
+  http://localhost:8095/metamodel/start
 
 This will return a response with a sessionId used by subsequent requests:
 

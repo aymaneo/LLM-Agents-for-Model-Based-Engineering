@@ -101,6 +101,44 @@ Total objects: 2
 
 ---
 
+## LLM Agent CLI
+
+The repository now ships with an interactive CLI that mirrors the agentic setup from
+`ATL-LLM-agent` but targets the stateless MCP server defined in `emf_mcp_stateless.py`.
+
+### Prerequisites
+
+- All requirements from `requirements.txt` (including `langchain-openai`).
+- An `OPENAI_API_KEY` environment variable for the chat model.
+
+### Launching the Agent
+
+```bash
+python simple_emf_agent.py --server /absolute/path/to/emf_mcp_stateless.py
+```
+
+Optionally provide `--metamodel /path/to/file.ecore` to upload a metamodel immediately. If you omit it, start a session from the chat by calling the `start_session` tool and pass the absolute path to the `.ecore` file.
+python simple_emf_agent.py /Users/aymane/Documents/AI/LLM-Agents-for-Model-Based-Engineering/Paper Artifacts SAM 2025/atl_zoo-master/Families2Persons/Families.ecore \
+  --server /Users/aymane/Documents/AI/LLM-Agents-for-Model-Based-Engineering/17367894/emf-agent-main/emf_agent/emf_mcp_stateless.py
+
+Optional flags:
+
+- `--model`: Chat model identifier (default: `gpt-4o-mini`).
+- `--temperature`: Sampling temperature (default: `0.1`).
+- `--max-tokens`: Limit the length of each model response.
+- `--python`: Provide a custom Python executable for running the MCP server process.
+
+When the agent starts it will:
+
+1. Launch or connect to the stateless MCP server.
+2. If a metamodel path is provided (via `--metamodel` or the `start_session` tool), upload it and extract available classes.
+3. Enter an interactive loop where natural-language instructions are translated into MCP tool
+   calls (`start_session`, `create_object`, `update_feature`, `list_session_objects`, etc.).
+
+Type `exit` or `quit` to end the session.
+
+---
+
 ## API Reference
 
 ### Core Tools
