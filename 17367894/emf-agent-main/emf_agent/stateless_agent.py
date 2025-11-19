@@ -27,7 +27,7 @@ class EMFStatelessAgent:
     def __init__(
         self,
         client: MCPClient,
-        metamodel_path: str,
+        metamodel_path: Optional[str] = None,
         *,
         model_name: Optional[str] = None,
         temperature: Optional[float] = None,
@@ -278,7 +278,6 @@ class EMFStatelessAgent:
         state_input = {
             "messages": messages + [HumanMessage(content=user_message)]
         }
-
         try:
             self._state = await self._agent.ainvoke(
                 state_input,
@@ -286,8 +285,8 @@ class EMFStatelessAgent:
             )
         except GraphRecursionError:
             warning = (
-                "Recursion limit reached while planning tool calls. "
-                "Consider simplifying the request or increasing the recursion_limit."
+                "Recursion limit reached before completing the task. "
+                "Consider simplifying the request or increasing the recursion limit."
             )
             return {"answer": warning, "messages": []}
 
