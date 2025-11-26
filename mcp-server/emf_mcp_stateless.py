@@ -74,9 +74,9 @@ def make_request(method: str, endpoint: str, **kwargs) -> requests.Response:
 # MCP Tools
 # =============
 
-@mcp.tool(name="start_metamodel_session_stateless",
+@mcp.tool(name="start_session",
           description="Start a new session by uploading a .ecore file to the stateless EMF server. Returns sessionId.")
-async def start_metamodel_session_stateless(metamodel_file_path: str) -> str:
+async def start_session(metamodel_file_path: str) -> str:
     try:
         if not os.path.exists(metamodel_file_path):
             return f"Error: File not found at {metamodel_file_path}"

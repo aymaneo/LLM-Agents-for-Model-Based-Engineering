@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import json
-from typing import Any, Dict, Iterable, List, Optional
+from typing import Any, Dict, Iterable, List, Optional, Union
 
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, SystemMessage
 from langchain_core.tools import tool
@@ -107,7 +107,7 @@ class EMFStatelessAgent:
             raise RuntimeError("No active MCP session. Did you call 'initialize'?")
 
         payload = {"metamodel_file_path": metamodel_path}
-        result = await self._session.call_tool("start_metamodel_session_stateless", payload)
+        result = await self._session.call_tool("start_session", payload)
         response = self.format_invoke_result(result)
 
         try:
@@ -164,31 +164,48 @@ class EMFStatelessAgent:
         @tool("update_feature")
         async def update_feature_tool(
             class_name: str,
-            object_id: str,
+            object_id: Union[str, int],
             feature_name: str,
-            value: str,
+            value: Any,
         ) -> str:
-            """Update an attribute or reference on an existing object."""
+            """Update an attribute or reference on an existing object.
+
+            Args:
+                class_name: The metamodel class name
+                object_id: Object ID (numeric or string, will be converted)
+                feature_name: The feature/attribute name to update
+                value: The value to set (string, number, list, etc. - will be auto-serialized)
+            """
+            # Auto-convert object_id to string if it's an int
+            object_id_str = str(object_id) if object_id else ""
+
+            # Auto-serialize value if it's not already a string
+            if not isinstance(value, str):
+                value_str = json.dumps(value)
+            else:
+                value_str = value
+
             return await self._call_server_tool(
                 "update_feature",
                 {
                     "class_name": class_name,
-                    "object_id": object_id,
+                    "object_id": object_id_str,
                     "feature_name": feature_name,
-                    "value": value,
+                    "value": value_str,
                 },
             )
 
         tools.append(update_feature_tool)
 
         @tool("clear_feature")
-        async def clear_feature_tool(class_name: str, object_id: str, feature_name: str) -> str:
+        async def clear_feature_tool(class_name: str, object_id: Union[str, int], feature_name: str) -> str:
             """Unset a feature on an existing object."""
+            object_id_str = str(object_id) if object_id else ""
             return await self._call_server_tool(
                 "clear_feature",
                 {
                     "class_name": class_name,
-                    "object_id": object_id,
+                    "object_id": object_id_str,
                     "feature_name": feature_name,
                 },
             )
@@ -196,13 +213,14 @@ class EMFStatelessAgent:
         tools.append(clear_feature_tool)
 
         @tool("delete_object")
-        async def delete_object_tool(class_name: str, object_id: str) -> str:
+        async def delete_object_tool(class_name: str, object_id: Union[str, int]) -> str:
             """Delete an object instance from the current session."""
+            object_id_str = str(object_id) if object_id else ""
             return await self._call_server_tool(
                 "delete_object",
                 {
                     "class_name": class_name,
-                    "object_id": object_id,
+                    "object_id": object_id_str,
                 },
             )
 
@@ -216,13 +234,21 @@ class EMFStatelessAgent:
         tools.append(list_features_tool)
 
         @tool("inspect_instance")
-        async def inspect_instance_tool(class_name: str, object_id: str) -> str:
-            """Inspect the current feature values of an object instance."""
+        async def inspect_instance_tool(class_name: str, object_id: Union[str, int]) -> str:
+            """Inspect the current feature values of an object instance.
+
+            Args:
+                class_name: The metamodel class name
+                object_id: The object ID (numeric or string, will be auto-converted)
+            """
+            # Auto-convert object_id to string if it's an int
+            object_id_str = str(object_id) if object_id else ""
+
             return await self._call_server_tool(
                 "inspect_instance",
                 {
                     "class_name": class_name,
-                    "object_id": object_id,
+                    "object_id": object_id_str,
                 },
             )
 
