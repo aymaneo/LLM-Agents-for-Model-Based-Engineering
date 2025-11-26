@@ -8,6 +8,7 @@ from typing import Any, Dict, Iterable, List, Optional, Union
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, SystemMessage
 from langchain_core.tools import tool
 from langchain_ollama import ChatOllama
+from langchain_openai import ChatOpenAI
 from langgraph.errors import GraphRecursionError
 from langgraph.prebuilt import create_react_agent
 
@@ -85,22 +86,44 @@ class EMFStatelessAgent:
         model_name: Optional[str],
         temperature: Optional[float],
         max_tokens: Optional[int],
-    ) -> ChatOllama:
-        kwargs: Dict[str, Any] = {
-            "model": model_name or OLLAMA_MODEL,
-            "temperature": temperature if temperature is not None else OLLAMA_TEMPERATURE,
-        }
+    ):
+        """Create LLM instance, supporting both Ollama and OpenAI models."""
+        import os
 
-        if OLLAMA_BASE_URL:
-            kwargs["base_url"] = OLLAMA_BASE_URL
+        openai_key = os.environ.get("OPENAI_API_KEY")
 
-        if OLLAMA_MAX_RETRIES:
-            kwargs["max_retries"] = OLLAMA_MAX_RETRIES
+        use_openai = (
+            (model_name and model_name.startswith(("gpt-", "o1-"))) or
+            (openai_key and not model_name)
+        )
 
-        if max_tokens is not None:
-            kwargs["num_predict"] = max_tokens
+        if use_openai:
+            kwargs: Dict[str, Any] = {
+                "model": model_name or "gpt-4o-mini",
+                "temperature": temperature if temperature is not None else 0.1,
+            }
 
-        return ChatOllama(**kwargs)
+            if max_tokens is not None:
+                kwargs["max_tokens"] = max_tokens
+
+            return ChatOpenAI(**kwargs)
+        else:
+            # Use Ollama
+            kwargs: Dict[str, Any] = {
+                "model": model_name or OLLAMA_MODEL,
+                "temperature": temperature if temperature is not None else OLLAMA_TEMPERATURE,
+            }
+
+            if OLLAMA_BASE_URL:
+                kwargs["base_url"] = OLLAMA_BASE_URL
+
+            if OLLAMA_MAX_RETRIES:
+                kwargs["max_retries"] = OLLAMA_MAX_RETRIES
+
+            if max_tokens is not None:
+                kwargs["num_predict"] = max_tokens
+
+            return ChatOllama(**kwargs)
 
     async def _start_session(self, metamodel_path: str) -> str:
         if self._session is None:
