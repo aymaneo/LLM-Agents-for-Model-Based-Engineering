@@ -7,6 +7,7 @@ from typing import Any, Dict, List, Optional
 
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
 from langchain_ollama import ChatOllama
+from langchain_openai import ChatOpenAI
 from langgraph.errors import GraphRecursionError
 from langgraph.prebuilt import create_react_agent
 
@@ -101,16 +102,17 @@ class EMFStatelessAgent:
             "temperature": temperature if temperature is not None else OLLAMA_TEMPERATURE,
         }
 
-        if OLLAMA_BASE_URL:
-            kwargs["base_url"] = OLLAMA_BASE_URL
 
-        if OLLAMA_MAX_RETRIES:
-            kwargs["max_retries"] = OLLAMA_MAX_RETRIES
+            if OLLAMA_BASE_URL:
+                kwargs["base_url"] = OLLAMA_BASE_URL
 
-        if max_tokens is not None:
-            kwargs["num_predict"] = max_tokens
+            if OLLAMA_MAX_RETRIES:
+                kwargs["max_retries"] = OLLAMA_MAX_RETRIES
 
-        return ChatOllama(**kwargs)
+            if max_tokens is not None:
+                kwargs["num_predict"] = max_tokens
+
+            return ChatOllama(**kwargs)
 
     # --- Session Management ---
 
