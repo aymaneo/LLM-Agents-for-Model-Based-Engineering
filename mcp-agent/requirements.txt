@@ -1,13 +1,10 @@
-langchain
-langchain-community
-langsmith
-langchain_ollama
-langgraph
-tqdm
-pandas
-matplotlib
-fastapi
-mcp
-langchain-mcp-adapters
-langchain-openai
-python-dotenv
+# Core LLM Framework
+langchain-core>=0.3.0
+langchain-ollama>=0.2.0
+langgraph>=0.2.0
+
+# MCP Protocol
+mcp>=1.0.0
+
+# Configuration
+python-dotenv>=1.0.0
