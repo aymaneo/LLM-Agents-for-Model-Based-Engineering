@@ -13,10 +13,14 @@ from langgraph.prebuilt import create_react_agent
 
 from mcp_client import MCPClient
 from config import (
+    LLM_PROVIDER,
     OLLAMA_BASE_URL,
     OLLAMA_MAX_RETRIES,
     OLLAMA_MODEL,
     OLLAMA_TEMPERATURE,
+    OPENAI_MODEL,
+    OPENAI_TEMPERATURE,
+    OPENAI_MAX_RETRIES,
 )
 from prompts import SYSTEM_PROMPT_TEMPLATE
 from tools import build_emf_tools
@@ -95,24 +99,48 @@ class EMFStatelessAgent:
         model_name: Optional[str],
         temperature: Optional[float],
         max_tokens: Optional[int],
-    ) -> ChatOllama:
-        """Create and configure the ChatOllama LLM instance."""
-        kwargs: Dict[str, Any] = {
-            "model": model_name or OLLAMA_MODEL,
+    ):
+        """Create and configure the LLM instance (Ollama or OpenAI)."""
+
+        # Decide which backend to use.
+        provider = (LLM_PROVIDER or "ollama").lower()
+
+        # --- OpenAI backend ---
+        if provider == "openai":
+            effective_model = model_name or OPENAI_MODEL
+            kwargs: Dict[str, Any] = {
+                "model": effective_model,
+                "temperature": (
+                    temperature if temperature is not None else OPENAI_TEMPERATURE
+                ),
+            }
+
+            if OPENAI_MAX_RETRIES:
+                kwargs["max_retries"] = OPENAI_MAX_RETRIES
+
+            # ChatOpenAI uses max_tokens instead of num_predict
+            if max_tokens is not None:
+                kwargs["max_tokens"] = max_tokens
+
+            return ChatOpenAI(**kwargs)
+
+        # --- Ollama backend (default) ---
+        effective_model = model_name or OLLAMA_MODEL
+        kwargs = {
+            "model": effective_model,
             "temperature": temperature if temperature is not None else OLLAMA_TEMPERATURE,
         }
 
+        if OLLAMA_BASE_URL:
+            kwargs["base_url"] = OLLAMA_BASE_URL
 
-            if OLLAMA_BASE_URL:
-                kwargs["base_url"] = OLLAMA_BASE_URL
+        if OLLAMA_MAX_RETRIES:
+            kwargs["max_retries"] = OLLAMA_MAX_RETRIES
 
-            if OLLAMA_MAX_RETRIES:
-                kwargs["max_retries"] = OLLAMA_MAX_RETRIES
+        if max_tokens is not None:
+            kwargs["num_predict"] = max_tokens
 
-            if max_tokens is not None:
-                kwargs["num_predict"] = max_tokens
-
-            return ChatOllama(**kwargs)
+        return ChatOllama(**kwargs)
 
     # --- Session Management ---
 
@@ -122,7 +150,11 @@ class EMFStatelessAgent:
             raise RuntimeError("No active MCP session. Did you call 'initialize'?")
 
         payload = {"metamodel_file_path": metamodel_path}
-        result = await self._session.call_tool("start_session", payload)
+        # NOTE: This maps the agent-level ``start_session`` tool to the actual MCP
+        # tool implemented by the EMF server, ``start_metamodel_session_stateless``.
+        result = await self._session.call_tool(
+            "start_metamodel_session_stateless", payload
+        )
         response = format_invoke_result(result)
 
         try:

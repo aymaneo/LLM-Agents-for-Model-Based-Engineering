@@ -1,15 +1,23 @@
 """Configuration module for the EMF MCP Agent."""
 
 from .config import (
+    LLM_PROVIDER,
     OLLAMA_BASE_URL,
     OLLAMA_MAX_RETRIES,
     OLLAMA_MODEL,
     OLLAMA_TEMPERATURE,
+    OPENAI_MODEL,
+    OPENAI_TEMPERATURE,
+    OPENAI_MAX_RETRIES,
 )
 
 __all__ = [
+    "LLM_PROVIDER",
     "OLLAMA_BASE_URL",
     "OLLAMA_MAX_RETRIES",
     "OLLAMA_MODEL",
     "OLLAMA_TEMPERATURE",
+    "OPENAI_MODEL",
+    "OPENAI_TEMPERATURE",
+    "OPENAI_MAX_RETRIES",
 ]
