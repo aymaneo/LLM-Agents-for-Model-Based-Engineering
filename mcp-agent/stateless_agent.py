@@ -3,23 +3,28 @@
 from __future__ import annotations
 
 import json
-from typing import Any, Dict, Iterable, List, Optional, Union
+from typing import Any, Dict, List, Optional
 
-from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, SystemMessage
-from langchain_core.tools import tool
+from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
 from langchain_ollama import ChatOllama
 from langchain_openai import ChatOpenAI
 from langgraph.errors import GraphRecursionError
 from langgraph.prebuilt import create_react_agent
 
 from mcp_client import MCPClient
-from prompts.system_prompt import SYSTEM_PROMPT_TEMPLATE
-from config.config import (
+from config import (
+    LLM_PROVIDER,
     OLLAMA_BASE_URL,
     OLLAMA_MAX_RETRIES,
     OLLAMA_MODEL,
     OLLAMA_TEMPERATURE,
+    OPENAI_MODEL,
+    OPENAI_TEMPERATURE,
+    OPENAI_MAX_RETRIES,
 )
+from prompts import SYSTEM_PROMPT_TEMPLATE
+from tools import build_emf_tools
+from utils import content_to_str, extract_classes_from_routes, extract_final_answer, format_invoke_result
 
 
 class EMFStatelessAgent:
@@ -46,10 +51,11 @@ class EMFStatelessAgent:
         self._classes: List[str] = []
 
         self._llm = self._create_llm(model_name, temperature, max_tokens)
-
         self._agent = None
         self._system_message: Optional[SystemMessage] = None
         self._state: Dict[str, List[BaseMessage]] = {"messages": []}
+
+    # --- Properties ---
 
     @property
     def session_id(self) -> Optional[str]:
@@ -63,23 +69,30 @@ class EMFStatelessAgent:
     def classes(self) -> List[str]:
         return self._classes
 
+    # --- Initialization ---
+
     async def initialize(self) -> None:
         """Connect to the MCP server, start a session, and prepare the agent graph."""
-
         self._session = await self._client.get_session()
 
-        tools = self._build_tools()
-        self._agent = create_react_agent(
-            self._llm,
-            tools,
+        tools = build_emf_tools(
+            session_getter=self._get_session,
+            session_id_getter=lambda: self._session_id,
+            classes_getter=lambda: self._classes,
+            start_session_handler=self._start_session,
         )
+
+        self._agent = create_react_agent(self._llm, tools)
         self._system_message = None
         self._state = {"messages": []}
-
         self._refresh_system_prompt()
 
         if self._metamodel_path:
             await self._start_session(self._metamodel_path)
+
+    async def _get_session(self):
+        """Get the current MCP session."""
+        return self._session
 
     def _create_llm(
         self,
@@ -87,51 +100,62 @@ class EMFStatelessAgent:
         temperature: Optional[float],
         max_tokens: Optional[int],
     ):
-        """Create LLM instance, supporting both Ollama and OpenAI models."""
-        import os
+        """Create and configure the LLM instance (Ollama or OpenAI)."""
 
-        openai_key = os.environ.get("OPENAI_API_KEY")
+        # Decide which backend to use.
+        provider = (LLM_PROVIDER or "ollama").lower()
 
-        use_openai = (
-            (model_name and model_name.startswith(("gpt-", "o1-"))) or
-            (openai_key and not model_name)
-        )
-
-        if use_openai:
+        # --- OpenAI backend ---
+        if provider == "openai":
+            effective_model = model_name or OPENAI_MODEL
             kwargs: Dict[str, Any] = {
-                "model": model_name or "gpt-4o-mini",
-                "temperature": temperature if temperature is not None else 0.1,
+                "model": effective_model,
+                "temperature": (
+                    temperature if temperature is not None else OPENAI_TEMPERATURE
+                ),
             }
 
+            if OPENAI_MAX_RETRIES:
+                kwargs["max_retries"] = OPENAI_MAX_RETRIES
+
+            # ChatOpenAI uses max_tokens instead of num_predict
             if max_tokens is not None:
                 kwargs["max_tokens"] = max_tokens
 
             return ChatOpenAI(**kwargs)
-        else:
-            # Use Ollama
-            kwargs: Dict[str, Any] = {
-                "model": model_name or OLLAMA_MODEL,
-                "temperature": temperature if temperature is not None else OLLAMA_TEMPERATURE,
-            }
 
-            if OLLAMA_BASE_URL:
-                kwargs["base_url"] = OLLAMA_BASE_URL
+        # --- Ollama backend (default) ---
+        effective_model = model_name or OLLAMA_MODEL
+        kwargs = {
+            "model": effective_model,
+            "temperature": temperature if temperature is not None else OLLAMA_TEMPERATURE,
+        }
 
-            if OLLAMA_MAX_RETRIES:
-                kwargs["max_retries"] = OLLAMA_MAX_RETRIES
+        if OLLAMA_BASE_URL:
+            kwargs["base_url"] = OLLAMA_BASE_URL
 
-            if max_tokens is not None:
-                kwargs["num_predict"] = max_tokens
+        if OLLAMA_MAX_RETRIES:
+            kwargs["max_retries"] = OLLAMA_MAX_RETRIES
 
-            return ChatOllama(**kwargs)
+        if max_tokens is not None:
+            kwargs["num_predict"] = max_tokens
+
+        return ChatOllama(**kwargs)
+
+    # --- Session Management ---
 
     async def _start_session(self, metamodel_path: str) -> str:
+        """Start a new EMF session by uploading a metamodel."""
         if self._session is None:
             raise RuntimeError("No active MCP session. Did you call 'initialize'?")
 
         payload = {"metamodel_file_path": metamodel_path}
-        result = await self._session.call_tool("start_session", payload)
-        response = self.format_invoke_result(result)
+        # NOTE: This maps the agent-level ``start_session`` tool to the actual MCP
+        # tool implemented by the EMF server, ``start_metamodel_session_stateless``.
+        result = await self._session.call_tool(
+            "start_metamodel_session_stateless", payload
+        )
+        response = format_invoke_result(result)
 
         try:
             data = json.loads(response)
@@ -145,13 +169,13 @@ class EMFStatelessAgent:
         self._metamodel_path = metamodel_path
         self._session_id = session_id
         self._routes = data.get("routes", {})
-        self._classes = self._extract_classes_from_routes(self._routes)
-
+        self._classes = extract_classes_from_routes(self._routes)
         self._refresh_system_prompt()
 
         return response
 
     def _refresh_system_prompt(self) -> None:
+        """Update the system prompt with current session context."""
         content = SYSTEM_PROMPT_TEMPLATE.format(
             session_id=self._session_id or "<none>",
             metamodel_path=self._metamodel_path or "<not started>",
@@ -167,149 +191,10 @@ class EMFStatelessAgent:
         else:
             self._state["messages"] = [self._system_message] + messages
 
-    def _build_tools(self) -> List[Any]:
-        tools = []
-
-        @tool("start_session")
-        async def start_session_tool(metamodel_path: str) -> str:
-            """Start a new EMF session by uploading a metamodel file."""
-            return await self._start_session(metamodel_path)
-
-        tools.append(start_session_tool)
-
-        @tool("create_object")
-        async def create_object_tool(class_name: str) -> str:
-            """Create a new instance of a metamodel class in the active session."""
-            return await self._call_server_tool("create_object", {"class_name": class_name})
-
-        tools.append(create_object_tool)
-
-        @tool("update_feature")
-        async def update_feature_tool(
-            class_name: str,
-            object_id: Union[str, int],
-            feature_name: str,
-            value: Any,
-        ) -> str:
-            """Update an attribute or reference on an existing object.
-
-            Args:
-                class_name: The metamodel class name
-                object_id: Object ID (numeric or string, will be converted)
-                feature_name: The feature/attribute name to update
-                value: The value to set (string, number, list, etc. - will be auto-serialized)
-            """
-            # Auto-convert object_id to string if it's an int
-            object_id_str = str(object_id) if object_id else ""
-
-            # Auto-serialize value if it's not already a string
-            if not isinstance(value, str):
-                value_str = json.dumps(value)
-            else:
-                value_str = value
-
-            return await self._call_server_tool(
-                "update_feature",
-                {
-                    "class_name": class_name,
-                    "object_id": object_id_str,
-                    "feature_name": feature_name,
-                    "value": value_str,
-                },
-            )
-
-        tools.append(update_feature_tool)
-
-        @tool("clear_feature")
-        async def clear_feature_tool(class_name: str, object_id: Union[str, int], feature_name: str) -> str:
-            """Unset a feature on an existing object."""
-            object_id_str = str(object_id) if object_id else ""
-            return await self._call_server_tool(
-                "clear_feature",
-                {
-                    "class_name": class_name,
-                    "object_id": object_id_str,
-                    "feature_name": feature_name,
-                },
-            )
-
-        tools.append(clear_feature_tool)
-
-        @tool("delete_object")
-        async def delete_object_tool(class_name: str, object_id: Union[str, int]) -> str:
-            """Delete an object instance from the current session."""
-            object_id_str = str(object_id) if object_id else ""
-            return await self._call_server_tool(
-                "delete_object",
-                {
-                    "class_name": class_name,
-                    "object_id": object_id_str,
-                },
-            )
-
-        tools.append(delete_object_tool)
-
-        @tool("list_features")
-        async def list_features_tool(class_name: str) -> str:
-            """List the structural features available on a class."""
-            return await self._call_server_tool("list_features", {"class_name": class_name})
-
-        tools.append(list_features_tool)
-
-        @tool("inspect_instance")
-        async def inspect_instance_tool(class_name: str, object_id: Union[str, int]) -> str:
-            """Inspect the current feature values of an object instance.
-
-            Args:
-                class_name: The metamodel class name
-                object_id: The object ID (numeric or string, will be auto-converted)
-            """
-            # Auto-convert object_id to string if it's an int
-            object_id_str = str(object_id) if object_id else ""
-
-            return await self._call_server_tool(
-                "inspect_instance",
-                {
-                    "class_name": class_name,
-                    "object_id": object_id_str,
-                },
-            )
-
-        tools.append(inspect_instance_tool)
-
-        @tool("list_session_objects")
-        async def list_session_objects_tool() -> str:
-            """List locally tracked objects created in this client session."""
-            return await self._call_server_tool("list_session_objects", {})
-
-        tools.append(list_session_objects_tool)
-
-        @tool("get_session_info")
-        async def get_session_info_tool() -> str:
-            """Display metadata about the active session."""
-            return await self._call_server_tool("get_session_info", {})
-
-        tools.append(get_session_info_tool)
-
-        @tool("debug_tools")
-        async def debug_tools_tool() -> str:
-            """List registered MCP tools on the server (debugging aid)."""
-            return await self._call_server_tool("debug_tools", {}, include_session_id=False)
-
-        tools.append(debug_tools_tool)
-
-        @tool("list_known_classes")
-        def list_known_classes_tool() -> str:
-            """Show the classes discovered from the metamodel routes without calling the server."""
-            if not self._classes:
-                return "No classes discovered from the OpenAPI specification."
-            return "Available classes: " + ", ".join(self._classes)
-
-        tools.append(list_known_classes_tool)
-
-        return tools
+    # --- Agent Execution ---
 
     async def run(self, user_message: str) -> Dict[str, Any]:
+        """Execute the agent with a user message and return the response."""
         if self._agent is None:
             raise RuntimeError("Agent not initialized. Call 'initialize' first.")
 
@@ -324,9 +209,8 @@ class EMFStatelessAgent:
             messages.insert(0, self._system_message)
 
         previous_count = len(messages)
-        state_input = {
-            "messages": messages + [HumanMessage(content=user_message)]
-        }
+        state_input = {"messages": messages + [HumanMessage(content=user_message)]}
+
         try:
             self._state = await self._agent.ainvoke(
                 state_input,
@@ -341,90 +225,13 @@ class EMFStatelessAgent:
 
         messages = self._state.get("messages", [])
         new_messages = messages[previous_count:]
-        answer = self._extract_final_answer(messages)
+        answer = extract_final_answer(messages)
 
         return {"answer": answer, "messages": new_messages}
 
-    async def _call_server_tool(
-        self,
-        tool_name: str,
-        payload: Dict[str, Any],
-        *,
-        include_session_id: bool = True,
-    ) -> str:
-        if self._session is None:
-            raise RuntimeError("No active MCP session. Did you call 'initialize'?")
-
-        args = dict(payload)
-        if include_session_id:
-            if not self._session_id:
-                return "No active EMF session. Call start_session with a metamodel path first."
-            args.setdefault("session_id", self._session_id)
-
-        result = await self._session.call_tool(tool_name, args)
-        return self.format_invoke_result(result)
-
-    @staticmethod
-    def format_invoke_result(result: Any) -> str:
-        content = getattr(result, "content", None)
-        if not content:
-            return "No content returned by MCP tool."
-
-        parts: List[str] = []
-        for block in content:
-            text = getattr(block, "text", None)
-            if text:
-                parts.append(text)
-                continue
-
-            data = getattr(block, "data", None)
-            if data:
-                try:
-                    parts.append(json.dumps(data, indent=2))
-                except (TypeError, ValueError):
-                    parts.append(str(data))
-                continue
-
-            parts.append(str(block))
-
-        return "\n".join(parts)
+    # --- Static Utility (kept for backward compatibility) ---
 
     @staticmethod
     def content_to_str(content: Any) -> str:
-        if isinstance(content, str):
-            return content
-        if isinstance(content, Iterable) and not isinstance(content, (bytes, bytearray)):
-            fragments = []
-            for element in content:  # type: ignore[arg-type]
-                if isinstance(element, dict):
-                    if "text" in element:
-                        fragments.append(str(element["text"]))
-                    else:
-                        fragments.append(json.dumps(element, indent=2))
-                else:
-                    fragments.append(str(element))
-            return "\n".join(fragments)
-        return json.dumps(content) if isinstance(content, (dict, list)) else str(content)
-
-    @staticmethod
-    def _extract_final_answer(messages: List[BaseMessage]) -> str:
-        for message in reversed(messages):
-            if isinstance(message, AIMessage) and not message.tool_calls:
-                return EMFStatelessAgent.content_to_str(message.content)
-        return ""
-
-    @staticmethod
-    def _extract_classes_from_routes(routes: Dict[str, Any]) -> List[str]:
-        if not isinstance(routes, dict):
-            return []
-
-        classes = set()
-        paths = routes.get("paths", {})
-        for path in paths:
-            parts = path.split("/")
-            if len(parts) >= 4 and parts[1] == "metamodel" and parts[2] == "{sessionId}":
-                class_name = parts[3]
-                if "{" not in class_name:
-                    classes.add(class_name)
-        return sorted(classes)
-
+        """Convert message content to string. Delegates to utils."""
+        return content_to_str(content)
